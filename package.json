@@ -14,7 +14,9 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/ikhramko/diplom-project#readme",
   "devDependencies": {
+    "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
+    "gulp-image": "^4.3.0",
     "gulp-pug": "^3.3.0",
     "gulp-sass": "^3.1.0"
   }
