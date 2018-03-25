@@ -95,16 +95,14 @@ body{
 }
 
 .masthead{
-    height: 500px;
+    height: 660px;
+    background-color: rgba(15,95,92,0.5);
     background-image: url("../images/masthead-bg.png");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-color: rgba(15,95,92,0.5);
-    &__content{
+    /* &__content{
         
-    }
+    } */
 }
-
 .section__title{
     font-size: 32px;
     font-family: "RobotoLight";
@@ -157,25 +155,30 @@ body{
     .other-features{
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         &__feature{
-            width: 100%;
+            width: 47%;
         }
+
+        &__feature:nth-child(1){
+            margin-bottom: 60px;
+        }
+
         &__heading{
             display: flex;
+            margin-bottom: 20px;
         }
         &__header{
             font-size: 16px;
             font-family: "RobotoRegular";
             color: rgb(15, 95, 92);
             line-height: 1.25;
-            text-align: center; 
         }
         &__description{
             font-size: 14px;
             font-family: "RobotoRegular";
             color: rgb(131, 167, 165);
             line-height: 1.571;
-            text-align: center;
         }
     }
 }
