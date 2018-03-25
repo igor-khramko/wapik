@@ -1,0 +1,62 @@
+@import 'fonts';
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 1056px;
+    margin: 0 auto;
+}
+
+.header{
+    &__content{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__company-name{
+        font-size: 13px;
+        font-family: "ProximaNova";
+        color: #000;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.615;
+    }
+    &__phone-number{
+    
+    }
+    &__phone-icon{
+    
+    }
+}
+
+.section__title{
+    font-size: 32px;
+    font-family: "RobotoLight";
+    color: rgb(15, 95, 92);
+    text-align: center;
+}
+
+.section__underline{
+    border-bottom: 1px solid rgb(111, 176, 72);
+    width: 65px;
+    height: 1px;
+    margin: 0 auto;
+}
+
+.section__description{
+    font-size: 15px;
+    font-family: "RobotoRegular";
+    color: rgb(131, 167, 165);
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.features{
+    &__content{
+        padding: 100px 0 130px;
+    }
+}
