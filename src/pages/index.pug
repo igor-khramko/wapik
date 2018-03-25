@@ -3,33 +3,68 @@ head
   meta(charset='utf-8')
   title Wapic
   meta(name='viewport', content='initial-scale=1')
-  link(rel='stylesheet', href='styles/main.css')
+  link(rel='stylesheet', type='text/css', href='styles/main.css')
 section.header
   .container.header__content
     .header__left
         .header__company-name Wapic
-    .header__phone-number
-        span.header__phone-icon
-        |+62 202 555 0117
+        .header__phone-number
+            span.header__phone-icon &#xf4b8;
+            |+62 202 555 0117
     .header__right
         .header__navigation.navigation
         ul.navigation
             li.navigation__item
-                a(href='') Home
+                a.link(href='') Home
             li.navigation__item
-                a(href='') About us
+                a.link(href='') About us
             li.navigation__item
-                a(href='') Pricing
+                a.link(href='') Pricing
             li.navigation__item
-                a(href='') Contact us
-    button.header__get-started-button(name='Get started',value='Get started') Get started
+                a.link(href='') Contact us
+        button.header__get-started-button.button(name='Get started',value='Get started') Get started
 section.masthead
-section.features
-    .container.features__content
+    .container.masthead__content
+section.our-features
+    .container.our-features__content
         .section__heading
             .section__title Best of our features
             .section__underline
             .section__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+        .our-features__best.best-features
+            .best-features__feature
+                .best-features__icon 
+                .best-features__header Ionicons
+                .best-features__description Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem.
+            .best-features__feature
+                .best-features__icon
+                .best-features__header Creative Design
+                .best-features__description Maecenas faucibus mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            .best-features__feature
+                .best-features__icon
+                .best-features__header Photoshop and Sketch
+                .best-features__description Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas sed diam eget risus varius blandit sit amet non magna.
+        .our-features__other.other-features
+            .other-features__feature
+                .other-features__heading
+                    .other-features__icon
+                    .other-features__header Cross Browser Compatibility
+                .other-features__description Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.
+            .other-features__feature
+                .other-features__heading
+                    .other-features__icon
+                    .other-features__header Creative Idea
+                .other-features__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper.
+            .other-features__feature
+                .other-features__heading
+                    .other-features__icon
+                    .other-features__header Pixel Perfect
+                .other-features__description Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            .other-features__feature
+                .other-features__heading
+                    .other-features__icon
+                    .other-features__header Free Forever and Ever
+                .other-features__description Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus.
 section.banner
     .container.banner__content
 section.testimonials
