@@ -108,13 +108,14 @@ body{
     font-family: "RobotoLight";
     color: rgb(15, 95, 92);
     text-align: center;
+    line-height: 1;
 }
 
 .section__underline{
     border-bottom: 1px solid rgb(111, 176, 72);
     width: 65px;
     height: 1px;
-    margin: 0 auto;
+    margin: 22px auto;
 }
 
 .section__description{
@@ -124,6 +125,7 @@ body{
     text-align: center;
     width: 50%;
     margin: 0 auto;
+    margin-bottom: 43px;
 }
 
 .our-features{
@@ -179,6 +181,65 @@ body{
             font-family: "RobotoRegular";
             color: rgb(131, 167, 165);
             line-height: 1.571;
+        }
+    }
+}
+
+.pricing{
+    &__content{
+        padding: 100px 0 60px;
+    }
+    &__plans{
+        display: flex;
+        justify-content: center;
+    }
+    .plan{
+        padding: 30px 58px;
+        border: 1px solid rgb(193, 211, 210);
+        background-color: #fff;
+        font-weight: bold;
+        text-align: center;
+        &__header{
+            font-size: 15px;
+            font-family: "RobotoMedium";
+            color: rgb(111, 176, 72);
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        &__price{
+            font-size: 65px;
+            font-family: "Montserrat";
+            color: rgb(15, 95, 92);
+            line-height: 1;             
+        }
+        &__duration{
+            font-size: 14px;
+            font-family: "RobotoRegular";
+            color: rgb(15, 95, 92);
+        }
+        &__options{
+            font-size: 14px;
+            font-family: "RobotoRegular";
+            color: rgb(131, 167, 165);
+            line-height: 2;
+            margin: 28px 0;
+        }
+        &__select-button{
+            font-size: 13px;
+            font-family: "Montserrat";
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            border-radius: 2px;
+            background-color: rgb(131, 167, 165);
+            padding: 16px 25px;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            line-height: 1;
+        }
+        &__select-button:hover{
+            background-color: rgb(111, 176, 72);
         }
     }
 }
