@@ -15,8 +15,8 @@
 	src: url('../fonts/Roboto/RobotoLight.ttf');
 }
 @font-face {
-	font-family: 'RobotoBold';
-	src: url('../fonts/Roboto/RobotoBold.ttf');
+	font-family: 'RobotoMedium';
+	src: url('../fonts/Roboto/RobotoMedium.ttf');
 }
 @font-face {
 	font-family: 'Montserrat';
@@ -29,9 +29,10 @@
 
 @font-face {
 	font-family: 'Icons';
-	src:url('/fonts/Icons/icons.woff') format('woff'),
-		url('/fonts/Icons/icons.ttf') format('ttf'),
-		url('/fonts/Icons/icons.eot') format('eot'),
-		url('/fonts/Icons/icons.svg') format('svg'); 
-   }
+	src:url('../fonts/Icons/icons.#iefix') format('embedded-opentype'),
+		url('../fonts/Icons/icons.ttf') format('ttf'),
+		url('../fonts/Icons/icons.eot') format('eot'),
+		url('../fonts/Icons/icons.woff') format('woff'),
+		url('../fonts/Icons/icons.svg') format('svg');
+}
 
