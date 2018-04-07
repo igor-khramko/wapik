@@ -61,11 +61,12 @@ body{
         font-size: 20px;
         font-family: "ProximaNova";
         text-transform: uppercase;
+        font-weight: bold;
         line-height: 1.615;
         padding: 0;
         margin-right: 25px;
     }
-    
+
     &__phone-number{
         font-size: 13px;
         font-family: "Montserrat";
@@ -77,7 +78,8 @@ body{
     }
     &__phone-icon{
         font-family: 'Icons';
-        font-size: 13px;
+        font-size: 14px;
+        margin-right: 6px;
     }
     .navigation{
         list-style-type: none;
@@ -142,9 +144,11 @@ body{
         text-align: center;
         border-radius: 2px;
         border: 0;
+        line-height: 1;
         background-color: rgb(111, 176, 72);
-        padding: 20px 45px;
+        padding: 18px 45px;
         cursor: pointer;
+        box-sizing: border-box;
     }
 }
 .section__title{
@@ -172,6 +176,83 @@ body{
     margin-bottom: 43px;
 }
 
+.our-features{
+    &__content{
+        padding: 100px 0 130px;
+    }
+    .best-features{
+        @include flex(space-between);
+        margin: 75px 0 35px;
+        &__feature{
+            width: 31%;
+        }
+        &__icon{
+            font-family: "Icons";
+            font-size: 56px;
+            color: #6fb048;
+            text-align: center;
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        &__header{
+            font-size: 16px;
+            font-family: "RobotoRegular";
+            color: rgb(15, 95, 92);
+            line-height: 1.25;
+            text-align: center; 
+            margin-bottom: 20px;
+        }
+        &__description{
+            font-size: 14px;
+            font-family: "RobotoRegular";
+            color: rgb(131, 167, 165);
+            line-height: 1.571;
+            text-align: center;
+        }
+    }
+    .other-features{
+        @include flex(space-between);
+        flex-wrap: wrap;
+        &__feature{
+            width: 47%;
+        }
+
+        &__feature:nth-child(1){
+            margin-bottom: 60px;
+        }
+
+        &__heading{
+            display: flex;
+            margin-bottom: 20px;
+            align-items: center;
+            justify-content: space-around;
+        }
+        &__icon{
+            font-family: "Icons";
+            font-size: 38px;
+            color: #6fb048;
+            text-align: center;
+            line-height: 1;
+            width: 10%;
+        }
+
+        &__header{
+            font-size: 16px;
+            font-family: "RobotoRegular";
+            color: rgb(15, 95, 92);
+            line-height: 1.25;
+            width: 85%;
+        }
+        &__description{
+            font-size: 14px;
+            font-family: "RobotoRegular";
+            color: rgb(131, 167, 165);
+            line-height: 1.571;
+        }
+    }
+}
+
 .presentation{
     box-sizing: border-box;
     background-color: #eef1ec;
@@ -190,18 +271,10 @@ body{
         background-position: -100px calc(100% + 140px);
         width: 40%;
         position: relative;
-        /*&__screen{
+        &__screen{
             position: absolute;
             left: 160px;
             top: 85px; 
-        }*/
-        &__screen{
-            background-image: url(../images/screen.png);
-            width: 179px;
-            height: 315px;
-            position: absolute;
-            left: 160px;
-            top: 85px;
         }
     }
     &__caption{
@@ -224,7 +297,14 @@ body{
         font-size: 14px;
         font-family: "RobotoRegular";
         color: rgb(131, 167, 165);
-        line-height: 2.714;
+    }
+    
+    &__item::before{
+        content: "\f3fe";
+        font-family: "Icons";
+        font-size: 26px;
+        color: rgb(131, 167, 165);
+        margin-right: 12px;   
     }
 }
 
@@ -265,61 +345,6 @@ body{
     }
 }
 
-.our-features{
-    &__content{
-        padding: 100px 0 130px;
-    }
-    .best-features{
-        @include flex(space-between);
-        margin: 75px 0 35px;
-        &__feature{
-            width: 31%;
-        }
-        &__header{
-            font-size: 16px;
-            font-family: "RobotoRegular";
-            color: rgb(15, 95, 92);
-            line-height: 1.25;
-            text-align: center; 
-        }
-        &__description{
-            font-size: 14px;
-            font-family: "RobotoRegular";
-            color: rgb(131, 167, 165);
-            line-height: 1.571;
-            text-align: center;
-        }
-    }
-    .other-features{
-        @include flex(space-between);
-        flex-wrap: wrap;
-        &__feature{
-            width: 47%;
-        }
-
-        &__feature:nth-child(1){
-            margin-bottom: 60px;
-        }
-
-        &__heading{
-            display: flex;
-            margin-bottom: 20px;
-        }
-        &__header{
-            font-size: 16px;
-            font-family: "RobotoRegular";
-            color: rgb(15, 95, 92);
-            line-height: 1.25;
-        }
-        &__description{
-            font-size: 14px;
-            font-family: "RobotoRegular";
-            color: rgb(131, 167, 165);
-            line-height: 1.571;
-        }
-    }
-}
-
 .map{
     background-image: url(../images/map.png);
     background-position: calc(50% + 390px) center;
@@ -336,6 +361,8 @@ body{
         font-size: 32px;
         font-family: "RobotoLight";
         color: rgb(15, 95, 92);
+        line-height: 1;
+        margin-bottom: 20px;
     }
     &__description{
         font-size: 14px;
@@ -429,7 +456,7 @@ body{
             border: 1px solid rgb(131, 167, 165);
             font-family: 'Icons';
             margin-right: 10px;
-            padding: 7px;
+            padding: 6px;
         }
     }
 }
@@ -498,18 +525,69 @@ body{
         width: 22%;
     }
     .column{
+        box-sizing: border-box;
         &__header{
             font-size: 13px; 
             font-family: "RobotoRegular";
             color: rgb(15, 95, 92);
-            line-height: 1.692;
+            margin-bottom: 25px;
+        }
+        &__email-address{
+            color: rgb(15, 95, 92);
         }
         &__data-row{
             font-size: 13px;
             font-family: "RobotoRegular";
             color: rgb(131, 167, 165);
-            line-height: 2.154;
+            margin-bottom: 15px;
         }
+        &__data-row:last-child{
+            margin-bottom: 0 ;
+        }
+        .address{
+            line-height: 1.385;
+        }
+        &__description{
+            font-size: 13px;
+            font-family: "RobotoRegular";
+            color: rgb(131, 167, 165);
+            line-height: 1.385;
+            margin-bottom: 20px;
+        }
+    }
+    &__email-field{
+        box-sizing: border-box;
+        height: 36px;
+    }
+    &__email{
+        box-sizing: border-box;
+        border: 0;
+        border-radius: 3px 0 0 3px;
+        background-color: rgb(238, 241, 236);
+        font-size: 13px;
+        font-family: "RobotoRegular";
+        color: rgb(131, 167, 165);
+        line-height: 1;
+        padding: 11px;
+        width: 80%;
+        outline: none;
+        float: left;
+    }
+    &__email-submit-button{
+        display: block;
+        float: left;
+        font-family: "Icons";
+        font-size: 18px;
+        text-align: center;
+        color: #6fb048;
+        width: 20%;
+        box-sizing: border-box;
+        border: 0;
+        border-radius: 0 3px 3px 0;
+        background-color: rgb(238, 241, 236);
+        padding: 9px;
+        cursor: pointer;
+        font-weight: bold;
     }
 }
 .copyright{
@@ -527,41 +605,56 @@ body{
     }
     .socials{
         @include flex(space-between); 
-        width: 30%;
+        width: 20%;
         .twitter{
             background-color: #55acee;
             border-radius: 50%;
             font-size: 16px;
             font-family: "Icons";
-            padding: 5px;        
+            padding: 7px 0;
+            text-align: center;
+            flex-basis: 30px;     
+            color: #fff; 
         }
         .facebook{
             background-color: #3b5998;
             border-radius: 50%;
             font-size: 16px;
             font-family: "Icons";
-            padding: 5px;           
+            padding: 7px 0;
+            text-align: center;
+            flex-basis: 30px;    
+            color: #fff;   
         }
         .instagram{
             background-color: #3f729b;
             border-radius: 50%;
             font-size: 16px;
             font-family: "Icons";
-            padding: 5px;           
+            padding: 7px 0;
+            text-align: center;
+            flex-basis: 30px;  
+            color: #fff;        
         }
         .dribbble{
             background-color: #ea4c89;
             border-radius: 50%;
             font-size: 16px;
             font-family: "Icons";
-            padding: 5px;           
+            padding: 7px 0;
+            text-align: center;
+            flex-basis: 30px;   
+            color: #fff;        
         }
-        .githib{
+        .github{
             background-color: #333333;
             border-radius: 50%;
             font-size: 16px;
             font-family: "Icons";
-            padding: 5px;              
+            padding: 7px 0;
+            text-align: center;
+            flex-basis: 30px;    
+            color: #fff;         
         }
     }
 }
