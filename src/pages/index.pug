@@ -28,14 +28,14 @@ section.masthead
         .masthead__caption
             .masthead__header Welcome to Wapik
             .masthead__description Wapik is multipurpose template, with modern and smart design. Wapik is perfect template for you!
-            a.masthead__learn-more-button.link(href="") Learn More
-section.our-features
-    .container.our-features__content
+            button.masthead__learn-more-button.button(name="Learn More", value="Learn More") Learn More
+section.about-us
+    .container.about-us__content
         .section__heading
             .section__title Best of our features
             .section__underline
             .section__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-        .our-features__best.best-features
+        .about-us__features.best-features
             .best-features__feature
                 .best-features__icon &#xf14b;
                 .best-features__header Ionicons
@@ -48,7 +48,7 @@ section.our-features
                 .best-features__icon &#xf3c9;
                 .best-features__header Photoshop and Sketch
                 .best-features__description Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas sed diam eget risus varius blandit sit amet non magna.
-        .our-features__other.other-features
+        .about-us__features.other-features
             .other-features__feature
                 .other-features__heading
                     .other-features__icon &#xf4d2;
@@ -151,7 +151,8 @@ section.pricing
 section.contact-us
     .container.contact-us__content
         .section__heading.contact-us__heading
-            a.section__title.contact-us__title.link(href="contact-us.html") Need Help?
+            a.section__title.contact-us__title.link(href="contact-us.html", title="Contact us...") Need Help?
+            //- .section__title.contact-us__title Need Help?
             .section__underline
             .section__description Contact our Customer Support that is always ready to help you with any possible questions, problems or information.
             a.contact-us__email.link(href="mailto:support@wapik.com") support@wapik.com
@@ -160,7 +161,7 @@ section.call-to-action
         .call-to-action__caption
             .call-to-action__header Do You Like Wapik? Download it Now
             .call-to-action__description Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-        a.call-to-action__download-button.link(href="", alt="") download now! - FREE forever
+        button.call-to-action__download-button.button(name="Download now", value="Download now") download now! - FREE forever
 section.footer
     .container.footer__content
         .footer__column.column
@@ -172,13 +173,13 @@ section.footer
         .footer__column.column
             .column__header Company
             .column__data-row
-                a.link(href="") Home
+                a.link(href="/") Home
             .column__data-row
-                a.link(href="") About Us
+                a.link(href="about-us.html") About Us
             .column__data-row
-                a.link(href="") Pricing
+                a.link(href="pricing.html") Pricing
             .column__data-row
-                a.link(href="") Contact Us
+                a.link(href="contact-us.html") Contact Us
         .footer__column.column
             .column__header Others
             .column__data-row
@@ -204,8 +205,8 @@ section.copyright
     .container.copyright__content
         .copyright__caption All rights reserved 2015.
         .copyright__socials.socials
-            .socials__item.twitter &#xf243;
-            .socials__item.facebook &#xf231;
-            .socials__item.instagram &#xf351;
-            .socials__item.dribbble &#xf22c;
-            .socials__item.github &#xf4e8;
+            a.link.socials__item.twitter(href="http://twitter.com") &#xf243;
+            a.link.socials__item.facebook(href="http://facebook.com") &#xf231;
+            a.link.socials__item.instagram(href="http://instagram.com") &#xf351;
+            a.link.socials__item.dribbble(href="http://dribbble.com") &#xf22c;
+            a.link.socials__item.github(href="http://github.com") &#xf4e8;

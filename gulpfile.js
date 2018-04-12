@@ -5,7 +5,7 @@ const image = require('gulp-image');
 const browserSync = require('browser-sync');
 
 gulp.task('sass', function () {
-    return gulp.src('./src/styles/*.scss')
+    return gulp.src('./src/styles/main.scss')
       .pipe(sass().on('error', sass.logError))
       .pipe(gulp.dest('./build/styles'));
   });
@@ -26,7 +26,7 @@ gulp.task('image', function () {
 });
 
 gulp.task('fonts', function () {
-  gulp.src('./src/fonts/**/*')
+  return gulp.src('./src/fonts/**/*')
     .pipe(gulp.dest('./build/fonts'));
 });
 

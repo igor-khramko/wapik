@@ -23,3 +23,59 @@ section.header
             li.navigation__item
                 a.link(href='contact-us.html') Contact us
         button.header__get-started-button.button(name='Get started',value='Get started') Get started
+
+
+section.call-to-action
+    .container.call-to-action__content
+        .call-to-action__caption
+            .call-to-action__header Do You Like Wapik? Download it Now
+            .call-to-action__description Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+        button.call-to-action__download-button.button(name="Download now", value="Download now") download now! - FREE forever
+section.footer
+    .container.footer__content
+        .footer__column.column
+            .column__header Wapik
+            .column__data-row @: 
+                span.column__email-address hi@wapik.com
+            .column__data-row p: +62 202 555 0117
+            .column__data-row.address a: 610 Overlook Circle Suite 323 Kalamazoo, MI 49009
+        .footer__column.column
+            .column__header Company
+            .column__data-row
+                a.link(href="/") Home
+            .column__data-row
+                a.link(href="about-us.html") About Us
+            .column__data-row
+                a.link(href="pricing.html") Pricing
+            .column__data-row
+                a.link(href="contact-us.html") Contact Us
+        .footer__column.column
+            .column__header Others
+            .column__data-row
+                a.link(href="") Help &amp; Support
+            .column__data-row
+                a.link(href="") Privacy Policy
+            .column__data-row
+                a.link(href="") Terms
+            .column__data-row
+                a.link(href="") Sitemap
+        .footer__column.column
+            .column__header Newsletter
+            .column__description Subscribe to our newsletter and get all the cool news
+            //- .footer__email-field
+            //-     input.footer__email.link(type="email", placeholder="Enter Email")
+            //-     a.footer__email-submit-button.link(href="") &#xf473;
+
+            form.footer__email-field(action="")
+                input.footer__email.link(type="email", placeholder="Enter Email", id="email")
+                label.footer__email-submit-button
+                    a.link(href="") &#xf473;
+section.copyright
+    .container.copyright__content
+        .copyright__caption All rights reserved 2015.
+        .copyright__socials.socials
+            a.link.socials__item.twitter(href="http://twitter.com") &#xf243;
+            a.link.socials__item.facebook(href="http://facebook.com") &#xf231;
+            a.link.socials__item.instagram(href="http://instagram.com") &#xf351;
+            a.link.socials__item.dribbble(href="http://dribbble.com") &#xf22c;
+            a.link.socials__item.github(href="http://github.com") &#xf4e8;

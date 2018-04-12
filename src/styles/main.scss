@@ -1,8 +1,9 @@
 @import 'fonts';
-@mixin flex($justify-content){
-    display: flex;
-    justify-content: $justify-content;
-}
+@import 'about-us';
+@import 'contact-us';
+@import 'pricing';
+@import 'flex';
+@import 'masthead-bg';
 $header-gradient-color: rgba(128, 128, 128, 0.8);
 $main-bg-color: #fff;
 $whitesmoke-color: #eef1ec;
@@ -34,8 +35,34 @@ body{
     text-decoration: none;
 }
 
+.link:hover{
+    text-decoration: underline;
+}
+
+.button{
+    font-size: 13px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 2px;
+    border: 2px solid transparent;
+    line-height: 1;
+    background-color: rgb(111, 176, 72);
+    padding: 18px 45px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
 .button:focus{
     outline: none;
+}
+
+.button:hover{
+    box-sizing: border-box;
+    outline: none;
+    border: 2px solid #fff;
+    background-color: transparent;
 }
 
 .header{
@@ -99,25 +126,13 @@ body{
     }
     &__get-started-button{
         font-size: 12px;
-        font-family: "Montserrat";
-        color: #fff;
-        text-transform: uppercase;
-        text-align: center;
-        border: none;
-        border-radius: 2px;
         background-color: rgba(255, 255, 255, 0.35);
         padding: 11px 13px;
-        cursor: pointer;
     }
 }
 
 .masthead{
-    background: url("../images/masthead-bg.png") no-repeat;
-    box-shadow: inset 0 0 0 1000px rgba(15,95,92,0.8);
-    background-size: cover;
-    /* &__content{
-        
-    } */
+    @include masthead-bg("../images/masthead-bg.png");
     &__caption{
         padding: 300px 0 200px;
         width: 48%;
@@ -136,19 +151,7 @@ body{
         margin: 20px 0;
     }
     &__learn-more-button{
-        display: inline-block;
         font-size: 14px;
-        font-family: "Montserrat";
-        color: rgb(255, 255, 255);
-        text-transform: uppercase;
-        text-align: center;
-        border-radius: 2px;
-        border: 0;
-        line-height: 1;
-        background-color: rgb(111, 176, 72);
-        padding: 18px 45px;
-        cursor: pointer;
-        box-sizing: border-box;
     }
 }
 .section__title{
@@ -176,13 +179,13 @@ body{
     margin-bottom: 43px;
 }
 
-.our-features{
+.about-us{
     &__content{
         padding: 100px 0 130px;
     }
     .best-features{
         @include flex(space-between);
-        margin: 75px 0 35px;
+        margin: 75px 0 180px;
         &__feature{
             width: 31%;
         }
@@ -252,7 +255,6 @@ body{
         }
     }
 }
-
 .presentation{
     box-sizing: border-box;
     background-color: #eef1ec;
@@ -410,18 +412,9 @@ body{
             margin: 28px 0;
         }
         &__select-button{
-            font-size: 13px;
-            font-family: "Montserrat";
-            color: #fff;
-            text-transform: uppercase;
-            text-align: center;
-            border-radius: 2px;
             background-color: rgb(131, 167, 165);
             padding: 16px 25px;
             border: 0;
-            outline: none;
-            cursor: pointer;
-            line-height: 1;
         }
         &__select-button:hover{
             background-color: rgb(111, 176, 72);
@@ -462,13 +455,17 @@ body{
 }
 
 .contact-us{
-    &__heading:hover &__title{
-        color: #6fb048;
-    }
-    &__title{
+    // &__title{ 
+    //     color: #6fb048;
+    // }
+    &__title{ 
         display: block;
         margin: 0 auto;
         width: 25%;
+    }
+    &__title:hover{
+        color: #6fb048;
+        text-decoration: none;
     }
     &__content{
         padding-bottom: 100px;
@@ -503,16 +500,14 @@ body{
         line-height: 1.467;
     }
     &__download-button{
+        padding: 17px 30px;
+    }
+    &__download-button:hover{
         box-sizing: border-box;
-        display: inline-block;
-        font-size: 13px;
-        font-family: "Montserrat";
-        color: rgb(255, 255, 255);
-        text-transform: uppercase;
-        text-align: center;
-        border-radius: 2px;
-        background-color: rgb(111, 176, 72);
-        padding: 17px 30px;  
+        border: 2px solid rgb(111, 176, 72);
+        color: rgb(111, 176, 72);
+        font-weight: bold;
+        background-color: transparent;
     }
 }
 
@@ -606,55 +601,32 @@ body{
     .socials{
         @include flex(space-between); 
         width: 20%;
-        .twitter{
-            background-color: #55acee;
+        &__item{
             border-radius: 50%;
             font-size: 16px;
             font-family: "Icons";
             padding: 7px 0;
             text-align: center;
-            flex-basis: 30px;     
-            color: #fff; 
+            flex-basis: 30px;    
+            color: #fff;  
+        }
+        &__item:hover{
+            text-decoration: none;
+        }
+        .twitter{
+            background-color: #55acee;
         }
         .facebook{
             background-color: #3b5998;
-            border-radius: 50%;
-            font-size: 16px;
-            font-family: "Icons";
-            padding: 7px 0;
-            text-align: center;
-            flex-basis: 30px;    
-            color: #fff;   
         }
         .instagram{
             background-color: #3f729b;
-            border-radius: 50%;
-            font-size: 16px;
-            font-family: "Icons";
-            padding: 7px 0;
-            text-align: center;
-            flex-basis: 30px;  
-            color: #fff;        
         }
         .dribbble{
             background-color: #ea4c89;
-            border-radius: 50%;
-            font-size: 16px;
-            font-family: "Icons";
-            padding: 7px 0;
-            text-align: center;
-            flex-basis: 30px;   
-            color: #fff;        
         }
         .github{
-            background-color: #333333;
-            border-radius: 50%;
-            font-size: 16px;
-            font-family: "Icons";
-            padding: 7px 0;
-            text-align: center;
-            flex-basis: 30px;    
-            color: #fff;         
+            background-color: #333333;       
         }
     }
 }

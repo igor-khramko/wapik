@@ -1,7 +1,7 @@
-.about-us{
-    background: url("../images/about-us-bg.png") no-repeat;
-    box-shadow: inset 0 0 0 1000px rgba(15,95,92,0.8);
-    background-size: cover;
+@import 'masthead-bg';
+@import 'flex';
+.masthead-about-us{
+    @include masthead-bg("../images/about-us-bg.png");
     &__caption{
         padding: 255px 0 165px;
         text-align: center;
@@ -16,17 +16,12 @@
         margin-bottom: 20px;
     }
 }
-.green-btn{
-    display: inline-block;
-    font-size: 14px;
-    font-family: "Montserrat";
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1;
-    border-radius: 2px;
-    border: 0;
-    background-color: rgb(111, 176, 72);
-    padding: 20px 30px;
-    cursor: pointer;
+.about-us{
+    &__content{
+        padding: 100px 0 105px;
+    }
+    &__best-features{
+        @include flex(space-between);
+        margin-top: 100px;
+    }
 }
