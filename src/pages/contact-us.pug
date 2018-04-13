@@ -4,7 +4,7 @@ head
   title Wapik
   meta(name='viewport', content='initial-scale=1')
   link(rel='stylesheet', type='text/css', href='styles/main.css')
-section.header
+section.header-contact-page
   .container.header__content
     .header__left
         .header__company-name Wapik
@@ -23,8 +23,26 @@ section.header
             li.navigation__item
                 a.link(href='contact-us.html') Contact us
         button.header__get-started-button.button(name='Get started',value='Get started') Get started
-
-
+section.masthead-map
+    iframe.masthead-map__content(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9406.191369661386!2d27.609909!3d53.886466!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x817b228ea6dc30f0!2z0KHRgtC-0YDQvNC90Y3RgiDQotC10LrQvdC-0LvQvtC00LbQuNGBIChTdG9ybW5ldCk!5e0!3m2!1sru!2sby!4v1523645722435", frameborder="0", allowfullscreen)
+section.feedback
+    .container.feedback__content
+        .section__heading
+            .section__title Get In Touch With Us
+            .section__underline
+            .section__description We are here to help. Want to learn more about our services? Please get in touch, we'd love to hear from you!
+        .feedback__info
+            form.feedback__form
+                input.feedback__form-item(type="text", placeholder="Name")
+                input.feedback__form-item(type="email", name="", placeholder="Email")
+                input.feedback__form-item(type="tel", name="", placeholder="Phone")
+                textarea.feedback__form-item(name="", cols="30", rows="3", placeholder="Message")
+                button.feedback-send-message-button.button(name="Send message", value="Send message") Send message
+            .feedback__headquarter.headquarter
+                .headquarter__header Headquarter
+                .headquarter__address 610 Overlook Circle Suite 323 Kalamazoo, MI 49009
+                .headquarter__phone-number +62 202 555 0117
+                .headquarter_email hi@wapik.com
 section.call-to-action
     .container.call-to-action__content
         .call-to-action__caption
