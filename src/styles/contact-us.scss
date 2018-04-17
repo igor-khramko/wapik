@@ -1,16 +1,10 @@
-@import "variables";
 .header-contact-page{
-    background: $main-bg-color;
+    // background: $main-bg-color;
 }
 .navigation{
     &__item {
-        display: inline-block;
-        font-size: 13px;
-        font-family: "Montserrat";
-        color: rgb(131, 167, 165);
-        text-transform: uppercase;
-      }
-      
+        
+    }
 }
 .masthead-map{
     &__content{
@@ -42,12 +36,61 @@
         width: 100%;
         margin-bottom: 25px;
     }
-
+    &__send-message-button:hover{
+        box-sizing: border-box;
+        border: 2px solid rgb(111, 176, 72);
+        color: rgb(111, 176, 72);
+        font-weight: bold;
+    }
     .headquarter{
         width: 30%;
         padding: 40px 40px 60px;
         border: 2px dashed rgb(193, 211, 210);
         background-color: rgb(255, 255, 255);
         margin-bottom: 135px;
+        font-family: "RobotoRegular";
+        font-size: 15px;
+        &__content{
+            width: 50%;
+        }
+        &__header{
+            font-size: 22px;
+            font-family: "RobotoLight";
+            color: rgb(15, 95, 92);
+            text-transform: uppercase;
+            line-height: 0.955;
+        }
+        &__address{
+            color: rgb(131, 167, 165);
+            line-height: 1.4;
+            margin: 30px 0;
+        }
+        &__address::before{
+            content: "\f456";
+            font-family: "Icons";
+            font-size: 15px;
+            margin-right: 15px;
+            color: rgb(111, 176, 72);
+        }
+        &__phone-number{
+            color: rgb(131, 167, 165);
+        }
+        &__phone-number::before{
+            content: "\f4b9";
+            font-family: "Icons";
+            font-size: 15px;
+            margin-right: 15px;
+            color: rgb(111, 176, 72);
+        }
+        &__email{
+            color: rgb(15, 95, 92);
+        }
+        &__email::before{
+            content: "\f132";
+            font-family: "Icons";
+            font-size: 15px;
+            margin-right: 15px;
+            color: rgb(111, 176, 72);
+        }
     }
 }

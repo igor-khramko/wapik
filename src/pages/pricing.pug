@@ -1,10 +1,10 @@
 doctype html
 head
   meta(charset='utf-8')
-  title Wapik
+  title Pricing
   meta(name='viewport', content='initial-scale=1')
   link(rel='stylesheet', type='text/css', href='styles/main.css')
-section.header
+section.header.header-light-bg
   .container.header__content
     .header__left
         .header__company-name Wapik
@@ -23,12 +23,12 @@ section.header
             li.navigation__item
                 a.link(href='contact-us.html') Contact us
         button.header__get-started-button.button(name='Get started',value='Get started') Get started
-section.pricing
+section.pricing.pricing-page
     .container.pricing__content
         .section__heading
-            .section__title Pricing &amp; Plan
-            .section__underline
-            .section__description Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. Donec id elit non mi porta gravida at eget metus.
+            .section__title.pricing-page__title Get Started with Wapik Today
+            .section__title.pricing-page__title All Plans include a 30-Day Trial Period
+            .section__description Cras mattis consectetur purus sit amet fermentum
         .pricing__plans
             .pricing__plan.plan
                 .plan__header Basic
@@ -41,8 +41,8 @@ section.pricing
                     .plan__option Cras Inceptos
                 button.plan__select-button.button(name="Select plan", value="Select plan") Select plan
             .pricing__plan.plan
-                .plan__header Basic
-                .plan__price $199
+                .plan__header Plus
+                .plan__price $399
                 .plan__duration /month
                 .plan__options
                     .plan__option Justo Fringilla
@@ -51,8 +51,8 @@ section.pricing
                     .plan__option Cras Inceptos
                 button.plan__select-button.button(name="Select plan", value="Select plan") Select plan
             .pricing__plan.plan
-                .plan__header Basic
-                .plan__price $199
+                .plan__header Premium
+                .plan__price $699
                 .plan__duration /month
                 .plan__options
                     .plan__option Justo Fringilla
@@ -60,20 +60,22 @@ section.pricing
                     .plan__option Ultricies Purus Amet
                     .plan__option Cras Inceptos
                 button.plan__select-button.button(name="Select plan", value="Select plan") Select plan
-        .pricing__addons.addons
-            .section__heading
-                .section__title.addons__title Included with all Plans
-                .section__underline.addons__underline
-            .addons__description
-                .addons__item Maecenas faucibus mollis interdum
-                .addons__item Vestibulum id ligula porta felis euismod
-                .addons__item Nulla vitae elit libero, a pharetra augue
-                .addons__item Cras justo odio, dapibus ac facilisis
-                .addons__item Duis mollis, est non commodo luctus
-                .addons__item Curabitur blandit tempus porttitor
-                .addons__item Fringilla Mattis
-                .addons__item Integer posuere
-                .addons__item Nullam quis risus eget urna mollis 
+        .pricing__description Limited Time Offer. All plans are FREE 14 days!
+section.addons.addons-page
+    .container.addons__content
+        .section__heading
+            .section__title.addons__title Included with all Plans
+            .section__underline.addons__underline
+        .addons__description
+            .addons__item Maecenas faucibus mollis interdum
+            .addons__item Vestibulum id ligula porta felis euismod                
+            .addons__item Nulla vitae elit libero, a pharetra augue
+            .addons__item Cras justo odio, dapibus ac facilisis
+            .addons__item Duis mollis, est non commodo luctus
+            .addons__item Curabitur blandit tempus porttitor
+            .addons__item Fringilla Mattis
+            .addons__item Integer posuere
+            .addons__item Nullam quis risus eget urna mollis 
 section.contact-us
     .container.contact-us__content
         .section__heading.contact-us__heading

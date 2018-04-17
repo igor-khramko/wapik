@@ -1,10 +1,10 @@
 doctype html
 head
   meta(charset='utf-8')
-  title Wapik
+  title Contact us
   meta(name='viewport', content='initial-scale=1')
   link(rel='stylesheet', type='text/css', href='styles/main.css')
-section.header-contact-page
+section.header.header-contact-page
   .container.header__content
     .header__left
         .header__company-name Wapik
@@ -37,12 +37,13 @@ section.feedback
                 input.feedback__form-item(type="email", name="", placeholder="Email")
                 input.feedback__form-item(type="tel", name="", placeholder="Phone")
                 textarea.feedback__form-item(name="", cols="30", rows="3", placeholder="Message")
-                button.feedback-send-message-button.button(name="Send message", value="Send message") Send message
+                input.feedback__send-message-button.button(type="submit",value="Send message")
             .feedback__headquarter.headquarter
-                .headquarter__header Headquarter
-                .headquarter__address 610 Overlook Circle Suite 323 Kalamazoo, MI 49009
-                .headquarter__phone-number +62 202 555 0117
-                .headquarter_email hi@wapik.com
+                .headquarter__content
+                    .headquarter__header Headquarter
+                    .headquarter__address 610 Overlook Circle Suite 323 Kalamazoo, MI 49009
+                    .headquarter__phone-number +62 202 555 0117
+                    .headquarter__email hi@wapik.com
 section.call-to-action
     .container.call-to-action__content
         .call-to-action__caption

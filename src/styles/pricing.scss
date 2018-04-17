@@ -1,3 +1,10 @@
-// .pricing-page{
-//     background-color: $whitesmoke-color;
-// }
+.header-light-bg{
+    background: #fff;
+}
+.pricing-page{
+   background-color: $whitesmoke-color;
+   &__title{
+        width: 50%;
+        margin: 0 auto;   
+   }
+}

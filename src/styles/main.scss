@@ -1,10 +1,10 @@
 @import 'fonts';
+@import "variables";
+@import 'flex';
+@import 'masthead-bg';
 @import 'about-us';
 @import 'contact-us';
 @import 'pricing';
-@import 'flex';
-@import 'masthead-bg';
-@import "variables";
 body{
     margin: 0;
     padding: 0;
@@ -38,9 +38,6 @@ body{
     padding: 18px 45px;
     cursor: pointer;
     box-sizing: border-box;
-}
-
-.button:focus{
     outline: none;
 }
 
@@ -50,11 +47,16 @@ body{
     border: 2px solid #fff;
     background-color: transparent;
 }
-
-.header{
+.header-dark-bg{
     background: linear-gradient(180deg, $header-gradient-color, transparent);
+}
+.header-light-bg{
+    background: transparent;
+}
+.header{
     position: fixed;
     width: 100%;
+    z-index: 100;
     &__content{
         @include flex(space-between);
         color: #fff;
@@ -101,13 +103,28 @@ body{
             display: inline;
             font-size: 13px;
             font-family: "Montserrat";
-            color: rgba(255, 255, 255, 0.702);
             text-transform: uppercase;
             line-height: 1.615;
             margin-right: 30px;
         }
         &__item:hover{
             color: #fff;
+        }
+    }
+    .navigation-light{
+        &__item{
+            color: rgba(255, 255, 255, 0.702);
+        }
+        &__item:hover{
+            color: #fff;
+        }
+    }
+    .navigation-dark{
+        &__item{
+            color: rgb(131, 167, 165);
+        }
+        &__item:hover{
+            color: rgb(144, 185, 183);;
         }
     }
     &__get-started-button{
@@ -262,7 +279,7 @@ body{
         &__screen{
             position: absolute;
             left: 160px;
-            top: 85px; 
+            top: 65px; 
         }
     }
     &__caption{
@@ -362,7 +379,7 @@ body{
 
 .pricing{
     &__content{
-        padding: 100px 0 80px;
+        padding-top: 100px;
     }
     &__plans{
         @include flex(center);
@@ -406,44 +423,51 @@ body{
             background-color: rgb(111, 176, 72);
         }
     }
-    .addons{
-        margin-top: 80px;
-        &__title{
-            font-size: 22px;
-            font-family: "Robotolight";
-            color: rgb(15, 95, 92);
-            text-align: center;
-            font-weight: bold;
-        }
-        &__underline{
-    
-        }
-        &__description{
-            @include flex(space-between);
-            flex-wrap: wrap;
-        }
-        &__item{
-            width: 30%;
-            font-size: 14px;
-            font-family: "RobotoRegular";
-            color: rgb(131, 167, 165);
-            line-height: 2.571;
-        }
-        &__item::before{
-            content: "\f122";
-            border-radius: 50%;
-            border: 1px solid rgb(131, 167, 165);
-            font-family: 'Icons';
-            margin-right: 10px;
-            padding: 6px;
-        }
+    &__description{
+        font-size: 14px;
+        font-family: "RobotoRegular";
+        color: rgb(131, 167, 165);
+        text-align: center;
+        padding: 30px 0 65px;
+    }
+}
+
+.addons{
+    &__content{
+        padding-top: 80px;
+    }
+    &__title{
+        font-size: 22px;
+        font-family: "Robotolight";
+        color: rgb(15, 95, 92);
+        text-align: center;
+        font-weight: bold;
+    }
+    &__underline{
+
+    }
+    &__description{
+        @include flex(space-between);
+        flex-wrap: wrap;
+    }
+    &__item{
+        width: 30%;
+        font-size: 14px;
+        font-family: "RobotoRegular";
+        color: rgb(131, 167, 165);
+        line-height: 2.571;
+    }
+    &__item::before{
+        content: "\f122";
+        border-radius: 50%;
+        border: 1px solid rgb(131, 167, 165);
+        font-family: 'Icons';
+        margin-right: 10px;
+        padding: 6px;
     }
 }
 
 .contact-us{
-    // &__title{ 
-    //     color: #6fb048;
-    // }
     &__title{ 
         display: block;
         margin: 0 auto;
@@ -454,7 +478,7 @@ body{
         text-decoration: none;
     }
     &__content{
-        padding-bottom: 100px;
+        padding: 60px 0 100px;
     }
     &__email{
         display: block;
@@ -555,8 +579,6 @@ body{
         float: left;
     }
     &__email-submit-button{
-        display: block;
-        float: left;
         font-family: "Icons";
         font-size: 18px;
         text-align: center;
@@ -569,6 +591,7 @@ body{
         padding: 9px;
         cursor: pointer;
         font-weight: bold;
+        outline: none;
     }
 }
 .copyright{
@@ -593,26 +616,48 @@ body{
             font-family: "Icons";
             padding: 7px 0;
             text-align: center;
-            flex-basis: 30px;    
+            flex-basis: 32px; 
+            border: 1px solid transparent;    
             color: #fff;  
-        }
-        &__item:hover{
-            text-decoration: none;
         }
         .twitter{
             background-color: #55acee;
         }
+        .twitter:hover{
+            border: 1px solid #55acee;    
+            color: #55acee;
+        }
         .facebook{
             background-color: #3b5998;
+        }
+        .facebook:hover{
+            border: 1px solid #3b5998;    
+            color: #3b5998; 
         }
         .instagram{
             background-color: #3f729b;
         }
+        .instagram:hover{
+            border: 1px solid #3f729b;    
+            color: #3f729b; 
+        }
         .dribbble{
             background-color: #ea4c89;
         }
+        .dribbble:hover{
+            border: 1px solid #ea4c89;    
+            color: #ea4c89;
+        }
         .github{
             background-color: #333333;       
+        }
+        .github:hover{
+            border: 1px solid #333333;    
+            color: #333333;
+        }
+        &__item:hover{
+            text-decoration: none;
+            background-color: #fff;
         }
     }
 }
