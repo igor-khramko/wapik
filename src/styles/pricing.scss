@@ -1,10 +1,11 @@
-.header-light-bg{
-    background: #fff;
+.header{
+    position: sticky;
+    background-color: $whitesmoke-color;
 }
 .pricing-page{
-   background-color: $whitesmoke-color;
-   &__title{
+    background-color: $whitesmoke-color;
+    &__title{
         width: 50%;
-        margin: 0 auto;   
-   }
+        margin: 0 auto; 
+    }
 }

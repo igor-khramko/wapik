@@ -34,40 +34,48 @@ body{
     border-radius: 2px;
     border: 2px solid transparent;
     line-height: 1;
-    background-color: rgb(111, 176, 72);
     padding: 18px 45px;
     cursor: pointer;
     box-sizing: border-box;
     outline: none;
+    &_green{
+        background-color: rgb(111, 176, 72);
+    }
+    &_hover-green:hover{
+        border: 2px solid rgb(111, 176, 72);
+        color: rgb(111, 176, 72);
+        background-color: transparent;
+    }
+    &_hover-transparent:hover{
+        border: 2px solid #fff;
+        color: #fff;
+        background-color: transparent;
+    }
 }
 
-.button:hover{
-    box-sizing: border-box;
-    outline: none;
-    border: 2px solid #fff;
-    background-color: transparent;
-}
-.header-dark-bg{
-    background: linear-gradient(180deg, $header-gradient-color, transparent);
-}
-.header-light-bg{
-    background: transparent;
-}
 .header{
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 100;
+    &_sticky{
+        position: sticky;
+    }
+    &_dark-bg{
+        background: linear-gradient(180deg, $header-gradient-color, transparent);
+    }
+    &_light-bg{
+        background: $main-bg-color;
+    }
     &__content{
         @include flex(space-between);
         color: #fff;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        &_dark{
+            border-bottom: 1px solid rgba(131, 167, 165, 0.502);
+        }          
     }
-    &__left{
-        display: flex;
-        align-items: center;
-        padding: 32px 0;
-    }
-    &__right{
+    &__left, &__right{
         display: flex;
         align-items: center;
         padding: 32px 0;
@@ -80,21 +88,28 @@ body{
         line-height: 1.615;
         padding: 0;
         margin-right: 25px;
-    }
-
+        &_dark{
+            color: rgb(15, 95, 92);
+        }
+    }      
     &__phone-number{
         font-size: 13px;
         font-family: "Montserrat";
-        color:#fff;
         text-transform: uppercase;
         line-height: 1.615;
         padding-left: 25px;
-        border-left: 1px solid rgba(255, 255, 255, 0.2);          
+        border-left: 1px solid rgba(255, 255, 255, 0.2);  
+        &_dark{
+            color: rgb(131, 167, 165);
+        }
     }
     &__phone-icon{
         font-family: 'Icons';
         font-size: 14px;
         margin-right: 6px;
+        &_dark{
+            color: rgb(131, 167, 165);
+        }
     }
     .navigation{
         list-style-type: none;
@@ -107,30 +122,30 @@ body{
             line-height: 1.615;
             margin-right: 30px;
         }
-        &__item:hover{
-            color: #fff;
+        &_light {
+            .navigation__item{
+                color: rgba(255, 255, 255, 0.702);
+            }
+            .navigation__item:hover{
+                color: #fff;
+            }
         }
-    }
-    .navigation-light{
-        &__item{
-            color: rgba(255, 255, 255, 0.702);
-        }
-        &__item:hover{
-            color: #fff;
-        }
-    }
-    .navigation-dark{
-        &__item{
-            color: rgb(131, 167, 165);
-        }
-        &__item:hover{
-            color: rgb(144, 185, 183);;
+        &_dark {
+            .navigation__item{
+                color: rgb(131, 167, 165);
+            }
+            .navigation__item:hover{
+                color: rgb(144, 185, 183);
+            }
         }
     }
     &__get-started-button{
         font-size: 12px;
         background-color: rgba(255, 255, 255, 0.35);
         padding: 11px 13px;
+        &_green{
+            background-color: rgb(111, 176, 72);
+        }
     }
 }
 
@@ -162,14 +177,15 @@ body{
     font-family: "RobotoLight";
     color: $section-title-color;
     text-align: center;
-    line-height: 1;
+    margin-bottom: 20px;
 }
 
 .section__underline{
     border-bottom: 1px solid $section-underline-color;
     width: 65px;
     height: 1px;
-    margin: 22px auto;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .section__description{
@@ -415,7 +431,7 @@ body{
             margin: 28px 0;
         }
         &__select-button{
-            background-color: rgb(131, 167, 165);
+            background-color: $aquamarine-color;
             padding: 16px 25px;
             border: 0;
         }
@@ -470,7 +486,7 @@ body{
 .contact-us{
     &__title{ 
         display: block;
-        margin: 0 auto;
+        margin: 0 auto 20px;
         width: 25%;
     }
     &__title:hover{
@@ -511,13 +527,6 @@ body{
     }
     &__download-button{
         padding: 17px 30px;
-    }
-    &__download-button:hover{
-        box-sizing: border-box;
-        border: 2px solid rgb(111, 176, 72);
-        color: rgb(111, 176, 72);
-        font-weight: bold;
-        background-color: transparent;
     }
 }
 
@@ -660,4 +669,23 @@ body{
             background-color: #fff;
         }
     }
+}
+
+:-moz-placeholder{
+    font-size: 13px;
+    font-family: "RobotoRegular";
+    color: rgb(131, 167, 165);
+    line-height: 1.385;
+}
+:-ms-input-placeholder{
+    font-size: 13px;
+    font-family: "RobotoRegular";
+    color: rgb(131, 167, 165);
+    line-height: 1.385;
+}
+::-webkit-input-placeholder{
+    font-size: 13px;
+    font-family: "RobotoRegular";
+    color: rgb(131, 167, 165);
+    line-height: 1.385;
 }

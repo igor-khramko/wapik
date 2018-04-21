@@ -19,5 +19,8 @@
     "gulp-image": "^4.3.0",
     "gulp-pug": "^3.3.0",
     "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "init": "^0.1.2"
   }
 }
