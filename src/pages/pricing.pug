@@ -6,132 +6,139 @@ head
     link(rel='stylesheet', type='text/css', href='styles/main.css')
 body
     section.header.header_sticky
-        .container.header__content.header__content_dark
-            .header__left
-                .header__company-name.header__company-name_dark Wapik
-                .header__phone-number.header__phone-number_dark
-                    span.header__phone-icon.header__phone-icon_dark &#xf4b9;
-                    |+62 202 555 0117
-            .header__right
-                .header__navigation
-                    ul.navigation.navigation_dark
-                        li.navigation__item
-                            a.link(href='index.html') Home
-                        li.navigation__item
-                            a.link(href='about-us.html') About us
-                        li.navigation__item
-                            a.link(href='pricing.html') Pricing
-                        li.navigation__item
-                            a.link(href='contact-us.html') Contact us
-                        button.button.header__get-started-button.header__get-started-button_green.button_hover-green(name='Get started',value='Get started') Get started
+        .container
+            .header__content.header__content_dark
+                .header__left
+                    .header__company-name.header__company-name_dark Wapik
+                    .header__phone-number.header__phone-number_dark
+                        span.header__phone-icon.header__phone-icon_dark &#xf4b9;
+                        |+62 202 555 0117
+                .header__right
+                    .header__navigation
+                        ul.navigation.navigation_dark
+                            li.navigation__item
+                                a.link(href='index.html') Home
+                            li.navigation__item
+                                a.link(href='about-us.html') About us
+                            li.navigation__item
+                                a.link(href='pricing.html') Pricing
+                            li.navigation__item
+                                a.link(href='contact-us.html') Contact us
+                            button.button.header__get-started-button.header__get-started-button_green.button_hover-green(name='Get started',value='Get started') Get started
     section.pricing.pricing-page
-        .container.pricing__content
-            .section__heading
-                .section__title.pricing-page__title
-                    | Get Started with Wapik Today
-                    br 
-                    |All Plans include a 30-Day Trial Period
-                .section__description Cras mattis consectetur purus sit amet fermentum
-            .pricing__plans
-                .pricing__plan.plan
-                    .plan__header Basic
-                    .plan__price $199
-                    .plan__duration /month
-                    .plan__options
-                        .plan__option Justo Fringilla
-                        .plan__option Mollis Sit Nullam
-                        .plan__option Ultricies Purus Amet
-                        .plan__option Cras Inceptos
-                    button.plan__select-button.button(name="Select plan", value="Select plan") Select plan
-                .pricing__plan.plan
-                    .plan__header Plus
-                    .plan__price $399
-                    .plan__duration /month
-                    .plan__options
-                        .plan__option Justo Fringilla
-                        .plan__option Mollis Sit Nullam
-                        .plan__option Ultricies Purus Amet
-                        .plan__option Cras Inceptos
-                    button.plan__select-button.button(name="Select plan", value="Select plan") Select plan
-                .pricing__plan.plan
-                    .plan__header Premium
-                    .plan__price $699
-                    .plan__duration /month
-                    .plan__options
-                        .plan__option Justo Fringilla
-                        .plan__option Mollis Sit Nullam
-                        .plan__option Ultricies Purus Amet
-                        .plan__option Cras Inceptos
-                    button.plan__select-button.button(name="Select plan", value="Select plan") Select plan
-            .pricing__description Limited Time Offer. All plans are FREE 14 days!
+        .container
+            .pricing__content
+                .section__heading
+                    .section__title.pricing-page__title
+                        | Get Started with Wapik Today
+                        br 
+                        |All Plans include a 30-Day Trial Period
+                    .section__description Cras mattis consectetur purus sit amet fermentum
+                .pricing__plans
+                    .pricing__plan.plan
+                        .plan__header Basic
+                        .plan__price $199
+                        .plan__duration /month
+                        .plan__options
+                            .plan__option Justo Fringilla
+                            .plan__option Mollis Sit Nullam
+                            .plan__option Ultricies Purus Amet
+                            .plan__option Cras Inceptos
+                        button.plan__select-button.button(name="Select plan", value="Select plan") Select plan
+                    .pricing__plan.plan
+                        .plan__header Plus
+                        .plan__price $399
+                        .plan__duration /month
+                        .plan__options
+                            .plan__option Justo Fringilla
+                            .plan__option Mollis Sit Nullam
+                            .plan__option Ultricies Purus Amet
+                            .plan__option Cras Inceptos
+                        button.plan__select-button.button(name="Select plan", value="Select plan") Select plan
+                    .pricing__plan.plan
+                        .plan__header Premium
+                        .plan__price $699
+                        .plan__duration /month
+                        .plan__options
+                            .plan__option Justo Fringilla
+                            .plan__option Mollis Sit Nullam
+                            .plan__option Ultricies Purus Amet
+                            .plan__option Cras Inceptos
+                        button.plan__select-button.button(name="Select plan", value="Select plan") Select plan
+                .pricing__description Limited Time Offer. All plans are FREE 14 days!
     section.addons.addons-page
-        .container.addons__content
-            .section__heading
-                .section__title.addons__title Included with all Plans
-                .section__underline.addons__underline
-            .addons__description
-                .addons__item Maecenas faucibus mollis interdum
-                .addons__item Vestibulum id ligula porta felis euismod                
-                .addons__item Nulla vitae elit libero, a pharetra augue
-                .addons__item Cras justo odio, dapibus ac facilisis
-                .addons__item Duis mollis, est non commodo luctus
-                .addons__item Curabitur blandit tempus porttitor
-                .addons__item Fringilla Mattis
-                .addons__item Integer posuere
-                .addons__item Nullam quis risus eget urna mollis 
+        .container
+            .addons__content
+                .section__heading
+                    .section__title.addons__title Included with all Plans
+                    .section__underline.addons__underline
+                .addons__description
+                    .addons__item Maecenas faucibus mollis interdum
+                    .addons__item Vestibulum id ligula porta felis euismod                
+                    .addons__item Nulla vitae elit libero, a pharetra augue
+                    .addons__item Cras justo odio, dapibus ac facilisis
+                    .addons__item Duis mollis, est non commodo luctus
+                    .addons__item Curabitur blandit tempus porttitor
+                    .addons__item Fringilla Mattis
+                    .addons__item Integer posuere
+                    .addons__item Nullam quis risus eget urna mollis 
     section.contact-us
-        .container.contact-us__content
-            .section__heading.contact-us__heading
-                a.section__title.contact-us__title.link(href="contact-us.html", title="Contact us...") Need Help?
-                .section__underline
-                .section__description Contact our Customer Support that is always ready to help you with any possible questions, problems or information.
-                a.contact-us__email.link(href="mailto:support@wapik.com") support@wapik.com
+        .container
+            .contact-us__content
+                .section__heading.contact-us__heading
+                    a.section__title.contact-us__title.link(href="contact-us.html", title="Contact us...") Need Help?
+                    .section__underline
+                    .section__description Contact our Customer Support that is always ready to help you with any possible questions, problems or information.
+                    a.contact-us__email.link(href="mailto:support@wapik.com") support@wapik.com
     section.call-to-action
-        .container.call-to-action__content
-            .call-to-action__caption
-                .call-to-action__header Do You Like Wapik? Download it Now
-                .call-to-action__description Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-            button.button.call-to-action__download-button.button_green.button_hover-green(name="Download now", value="Download now") download now! - FREE forever
+        .container
+            .call-to-action__content
+                .call-to-action__caption
+                    .call-to-action__header Do You Like Wapik? Download it Now
+                    .call-to-action__description Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+                button.button.call-to-action__download-button.button_green.button_hover-green(name="Download now", value="Download now") download now! - FREE forever
     section.footer
-        .container.footer__content
-            .footer__column.column
-                .column__header Wapik
-                .column__data-row @: 
-                    span.column__email-address hi@wapik.com
-                .column__data-row p: +62 202 555 0117
-                .column__data-row.address a: 610 Overlook Circle Suite 323 Kalamazoo, MI 49009
-            .footer__column.column
-                .column__header Company
-                .column__data-row
-                    a.link(href="/") Home
-                .column__data-row
-                    a.link(href="about-us.html") About Us
-                .column__data-row
-                    a.link(href="pricing.html") Pricing
-                .column__data-row
-                    a.link(href="contact-us.html") Contact Us
-            .footer__column.column
-                .column__header Others
-                .column__data-row
-                    a.link(href="") Help &amp; Support
-                .column__data-row
-                    a.link(href="") Privacy Policy
-                .column__data-row
-                    a.link(href="") Terms
-                .column__data-row
-                    a.link(href="") Sitemap
-            .footer__column.column
-                .column__header Newsletter
-                .column__description Subscribe to our newsletter and get all the cool news
-                form.footer__email-field(action="")
-                    input.footer__email.link(type="email", placeholder="Enter Email", id="email")
-                    button.footer__email-submit-button &#xf473;
+        .container
+            .footer__content
+                .footer__column.column
+                    .column__header Wapik
+                    .column__data-row @: 
+                        span.column__email-address hi@wapik.com
+                    .column__data-row p: +62 202 555 0117
+                    .column__data-row.address a: 610 Overlook Circle Suite 323 Kalamazoo, MI 49009
+                .footer__column.column
+                    .column__header Company
+                    .column__data-row
+                        a.link(href="/") Home
+                    .column__data-row
+                        a.link(href="about-us.html") About Us
+                    .column__data-row
+                        a.link(href="pricing.html") Pricing
+                    .column__data-row
+                        a.link(href="contact-us.html") Contact Us
+                .footer__column.column
+                    .column__header Others
+                    .column__data-row
+                        a.link(href="") Help &amp; Support
+                    .column__data-row
+                        a.link(href="") Privacy Policy
+                    .column__data-row
+                        a.link(href="") Terms
+                    .column__data-row
+                        a.link(href="") Sitemap
+                .footer__column.column
+                    .column__header Newsletter
+                    .column__description Subscribe to our newsletter and get all the cool news
+                    form.footer__email-field(action="")
+                        input.footer__email.link(type="email", placeholder="Enter Email", id="email", required)
+                        button.footer__email-submit-button &#xf473;
     section.copyright
-        .container.copyright__content
-            .copyright__caption All rights reserved 2015.
-            .copyright__socials.socials
-                a.link.socials__item.twitter(href="http://twitter.com", title="Our Twitter") &#xf243;
-                a.link.socials__item.facebook(href="http://facebook.com", title="Our Facebook") &#xf231;
-                a.link.socials__item.instagram(href="http://instagram.com", title="Our Instagram") &#xf351;
-                a.link.socials__item.dribbble(href="http://dribbble.com", title="Our Dribbble") &#xf22c;
-                a.link.socials__item.github(href="http://github.com", title="Our Github") &#xf4e8;
+        .container
+            .copyright__content
+                .copyright__caption All rights reserved 2015.
+                .copyright__socials.socials
+                    a.link.socials__item.twitter(href="http://twitter.com", title="Our Twitter") &#xf243;
+                    a.link.socials__item.facebook(href="http://facebook.com", title="Our Facebook") &#xf231;
+                    a.link.socials__item.instagram(href="http://instagram.com", title="Our Instagram") &#xf351;
+                    a.link.socials__item.dribbble(href="http://dribbble.com", title="Our Dribbble") &#xf22c;
+                    a.link.socials__item.github(href="http://github.com", title="Our Github") &#xf4e8;

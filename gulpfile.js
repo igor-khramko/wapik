@@ -20,7 +20,7 @@ gulp.task('pug', function () {
 });
 
 gulp.task('image', function () {
-  gulp.src('./src/images/*')
+  gulp.src('./src/images/**')
     .pipe(image())
     .pipe(gulp.dest('./build/images'));
 });

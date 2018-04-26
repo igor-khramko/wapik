@@ -5,15 +5,18 @@
 @import 'about-us';
 @import 'contact-us';
 @import 'pricing';
+@import 'icons';
 body{
     margin: 0;
     padding: 0;
     background-color: $main-bg-color;
+    // font-weight: bold;
 }
 
 .container{
-    max-width: 1056px;
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 0 22px;
 }
 
 .link{
@@ -22,12 +25,14 @@ body{
 }
 
 .link:hover{
-    text-decoration: underline;
+    // text-decoration: underline;
+    cursor: pointer;
 }
 
 .button{
     font-size: 13px;
     font-family: "Montserrat";
+    font-weight: bold;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     text-align: center;
@@ -40,6 +45,12 @@ body{
     outline: none;
     &_green{
         background-color: rgb(111, 176, 72);
+    }
+    &_green-clicked{
+        border: 2px solid rgb(111, 176, 72);
+    }
+    &_dark-green{
+        background-color: rgb(73, 115, 47);
     }
     &_hover-green:hover{
         border: 2px solid rgb(111, 176, 72);
@@ -104,8 +115,7 @@ body{
         }
     }
     &__phone-icon{
-        font-family: 'Icons';
-        font-size: 14px;
+        @include icons(14px);
         margin-right: 6px;
         &_dark{
             color: rgb(131, 167, 165);
@@ -114,6 +124,7 @@ body{
     .navigation{
         list-style-type: none;
         padding: 0;
+        margin: 0;
         &__item{
             display: inline;
             font-size: 13px;
@@ -138,6 +149,11 @@ body{
                 color: rgb(144, 185, 183);
             }
         }
+    }
+    &__navigation-icon{
+        @include icons(26px);
+        margin-left: 15px;
+        display:none;
     }
     &__get-started-button{
         font-size: 12px;
@@ -209,8 +225,7 @@ body{
             width: 31%;
         }
         &__icon{
-            font-family: "Icons";
-            font-size: 56px;
+            @include icons(56px);
             color: #6fb048;
             text-align: center;
             line-height: 1;
@@ -235,7 +250,6 @@ body{
     }
     .other-features{
         @include flex(space-between);
-        flex-wrap: wrap;
         &__feature{
             width: 47%;
         }
@@ -251,12 +265,11 @@ body{
             justify-content: space-around;
         }
         &__icon{
-            font-family: "Icons";
-            font-size: 38px;
+            @include icons(38px);
             color: #6fb048;
             text-align: center;
             line-height: 1;
-            width: 10%;
+            flex-basis: 48px;
         }
 
         &__header{
@@ -264,7 +277,7 @@ body{
             font-family: "RobotoRegular";
             color: rgb(15, 95, 92);
             line-height: 1.25;
-            width: 85%;
+            flex-basis: 85%;
         }
         &__description{
             font-size: 14px;
@@ -284,19 +297,16 @@ body{
         padding-top: 75px;
     }
     &__body{
-        @include flex(space-between);
-    }
-    .phone{
+        @include flex(flex-end);
+        position: relative;
         background-image: url(../images/hand.png);
         background-repeat: no-repeat;
         background-position: -100px calc(100% + 140px);
-        width: 40%;
-        position: relative;
-        &__screen{
-            position: absolute;
-            left: 160px;
-            top: 65px; 
-        }
+    }
+    .phone__screen{
+        position: absolute;
+        left: 160px;
+        bottom: 125px; 
     }
     &__caption{
         padding: 150px 0 130px;
@@ -322,8 +332,7 @@ body{
     
     &__item::before{
         content: "\f3fe";
-        font-family: "Icons";
-        font-size: 26px;
+        @include icons(26px);
         color: rgb(131, 167, 165);
         margin-right: 12px;   
     }
@@ -399,12 +408,16 @@ body{
     }
     &__plans{
         @include flex(center);
+        flex-wrap: wrap;
     }
     .plan{
-        padding: 30px 58px;
+        box-sizing: border-box;
+        width: 26%;
+        padding: 30px 0;
         border: 1px solid rgb(193, 211, 210);
         background-color: #fff;
         text-align: center;
+        
         &__header{
             font-size: 15px;
             font-family: "RobotoMedium";
@@ -433,10 +446,33 @@ body{
         &__select-button{
             background-color: $aquamarine-color;
             padding: 16px 25px;
-            border: 0;
         }
-        &__select-button:hover{
+        
+    }
+    .plan:hover{
+        background-color: $aquamarine-color;
+        .plan__header{
+            color: #fff;
+        }
+        .plan__price{
+            color: #fff;
+        }
+        .plan__duration{
+            color: #fff;
+        }
+        .plan__options{
+            color: #fff;
+        }
+        .plan__select-button{
             background-color: rgb(111, 176, 72);
+            color: #fff;
+            
+        box-sizing: border-box;
+        }
+        .plan__select-button:hover{
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #fff;
         }
     }
     &__description{
@@ -459,9 +495,6 @@ body{
         text-align: center;
         font-weight: bold;
     }
-    &__underline{
-
-    }
     &__description{
         @include flex(space-between);
         flex-wrap: wrap;
@@ -477,7 +510,7 @@ body{
         content: "\f122";
         border-radius: 50%;
         border: 1px solid rgb(131, 167, 165);
-        font-family: 'Icons';
+        @include icons(14px);
         margin-right: 10px;
         padding: 6px;
     }
@@ -508,8 +541,12 @@ body{
 
 .call-to-action{
     background-image: url(../images/call-to-action-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     box-shadow: inset 0 0 0 1000px rgba(238,241,236,0.8);
-    height: 200px;
+    &_bg-green{
+        box-shadow: inset 0 0 0 1000px rgba(111, 176, 72,0.95);
+    }
     &__content{
         @include flex(space-between);
         align-items: center;
@@ -519,11 +556,17 @@ body{
         font-size: 28px;
         font-family: "RobotoLight";
         color: rgb(15, 95, 92);
+        &_light{
+            color: #fff;
+        }
     }
     &__description{
         font-family: "RobotoRegular";
         color: rgb(131, 167, 165);
         line-height: 1.467;
+        &_light{
+            color: #fff;
+        }
     }
     &__download-button{
         padding: 17px 30px;
@@ -588,8 +631,7 @@ body{
         float: left;
     }
     &__email-submit-button{
-        font-family: "Icons";
-        font-size: 18px;
+        @include icons(18px);
         text-align: center;
         color: #6fb048;
         width: 20%;
@@ -606,6 +648,7 @@ body{
 .copyright{
     &__content{
         @include flex(space-between);
+        align-items: center;
         border-top: 1px solid rgb(238, 241, 236);
         padding: 20px 0;
     }
@@ -617,17 +660,21 @@ body{
             text-align: left;
     }
     .socials{
-        @include flex(space-between); 
-        width: 20%;
         &__item{
+            box-sizing: border-box;
+            display: inline-block;
             border-radius: 50%;
-            font-size: 16px;
-            font-family: "Icons";
-            padding: 7px 0;
+            @include icons(16px);
             text-align: center;
-            flex-basis: 32px; 
+            width: 32px; 
+            height: 32px; 
+            padding: 7px;
             border: 1px solid transparent;    
             color: #fff;  
+            margin-right: 10px;
+        }
+        &__item:last-child{
+            margin-right: 0;
         }
         .twitter{
             background-color: #55acee;
@@ -688,4 +735,342 @@ body{
     font-family: "RobotoRegular";
     color: rgb(131, 167, 165);
     line-height: 1.385;
+}
+
+@media (max-width: 980px){
+    .section__description{
+        width: 75%;
+    }
+    .addons{
+        &__description{
+            justify-content: space-around;
+        }
+        &__item{
+            width: 40%;
+        }
+        &__item:last-child{
+            margin: 0 auto;
+        }
+    }
+    .testimonials{
+        &__content{
+            padding: 90px 0;
+        }
+    }
+    .call-to-action{
+        &__content{
+            @include flex(center);
+            align-items: center;
+            text-align: center;
+            padding: 38px 0;
+        }
+        &__caption{
+            flex-basis: 80%;
+            margin-bottom: 16px;
+        }
+    }
+    .teammate{
+        margin-bottom: 40px;
+    }
+    .teammate:last-child{
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 850px){
+    .header{
+        &__content{
+            padding: 0 22px;
+        }
+        &__navigation{
+            display: none;
+        }
+        &__navigation-icon{
+            display:block;
+        }
+        &__get-started-button{
+            margin-left: 15px;
+        }
+    }
+    .masthead{
+        &__caption{
+            padding: 200px 0 150px;
+            width: 70%;
+        }
+    }
+    .about-us{
+        .best-features{
+            @include flex(center);
+            margin: 45px 0;
+            &__feature{
+                width: 60%;
+                margin-bottom: 35px;
+            }
+            &__feature:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .presentation{
+        &__body{
+            @include flex(center);
+            background-position: 0 calc(100% + 140px);
+        }
+        .phone__screen{
+            left: 260px;
+            bottom: 125px; 
+        }
+        &__caption{
+            padding: 50px 0 530px;
+            width: 80%;
+        }
+    }
+    .testimonials{
+        &__content{
+            padding: 50px 0;
+        }
+        .testimonial{
+            width: 60%;
+            &__description{
+                font-size: 20px;
+                line-height: 1.4;
+                margin-bottom: 25px;
+            }
+        }
+        &__photo{
+            flex-basis: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-image: url(../images/testimonial-author.png);
+            background-size: cover;
+        }
+    }
+    .map{
+        background-position: center bottom;
+        background-repeat: no-repeat;  
+        background-size: 100%;
+        background-color: rgb(238, 241, 236);
+        &__content{
+            @include flex(center);
+        }
+        &__caption{
+            padding: 70px 0 500px;
+            width: 75%;
+        }
+    }
+    .pricing{
+        .plan{
+            width: 31%;
+        }
+    }
+    .addons{
+        &__item{
+            width: 43%;
+        }
+    }
+}
+
+@media (max-width: 720px){
+    .map{  
+        &__caption{
+            padding: 70px 0 450px;
+            width: 75%;
+        }
+    }
+    .pricing{
+        &__content{
+            padding-top: 50px;
+        }
+        .plan{
+            width: 55%;
+            margin-bottom: 25px;
+        }
+        .plan:last-child{
+            margin-bottom: 0;
+        }
+    }    
+    .addons{
+        &__description{
+            justify-content: center;
+        }
+        &__item{
+            width: 51%;
+        }
+        &__item:last-child {
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width: 668px){
+    .section__description{
+        width: 95%;
+    }
+    .presentation{
+        &__body{
+            background-position: -100px calc(100% + 140px);
+        }
+        .phone__screen{
+            left: 160px;
+            bottom: 125px; 
+        }
+        &__caption{
+            padding: 50px 0 530px;
+            width: 80%;
+        }
+    }
+    .about-us{
+        &__content{
+            padding: 40px 0;
+        }
+        .best-features{
+            &__feature{
+                width: 95%;
+            }
+        }
+        .other-features{
+            flex-direction: column;
+            &__feature{
+                width: 98%;
+                max-width: 300px;
+                margin-bottom: 30px;
+                align-self: flex-start;
+            }
+            &__feature:nth-child(2n){
+                align-self: flex-end;
+            }
+            &__feature:nth-child(1){
+                margin-bottom: 30px;
+            }
+            &__description{
+                text-align: center;
+            }
+        }
+    }
+    .testimonials{
+        &__content{
+            @include flex(center);
+        }
+        .testimonial{
+            width: 80%;
+            order: 2;
+            &__description{
+                margin-bottom: 0;
+            }
+            &__author{
+                text-align: right;
+            }
+            &__position{
+                text-align: right;
+            }
+        }
+        &__photo{
+            order: 1;
+            height: 250px;
+            margin-bottom: 30px;
+        }
+    }
+    .map{  
+        background-image: none;
+        &__caption{
+            padding: 70px 0;
+        }
+        &__header{
+            text-align: center;
+        }
+    }
+    .addons{
+        &__description{
+            flex-direction: column;
+        }
+        &__item{
+            width: 95%;
+            max-width: 330px;
+            align-self: flex-start;
+        }
+        &__item:nth-child(2n){
+            align-self: flex-end;
+        }
+    }
+    .footer{
+        &__content{
+            @include flex(space-between);
+            padding: 45px 0;
+        }
+        &__column{
+            width: 40%;
+            margin-bottom: 45px;
+        }
+    }
+    
+}
+
+@media (max-width: 488px){
+    .header{
+        &__content{
+            justify-content: center;
+        }
+        &__left{
+            justify-content: center;
+            padding: 32px 0 0;
+        }   
+        &__right{
+            justify-content: center;
+            padding: 16px 0 32px;
+        }
+    }
+    .presentation{
+        &__body{
+            background-image: none;
+        }
+        .phone__screen{
+            display: none; 
+        }
+        &__caption{
+            padding: 20px 0 50px;
+            width: 90%;
+        }
+    }
+    .addons{
+        &__description{
+            flex-direction: row;
+        }
+        &__item{
+            width: 100%;
+            max-width: 330px;
+            align-self: none;
+        }
+        &__item:nth-child(2n){
+            align-self: none;
+        }
+    }
+    .copyright{
+        &__content{
+            @include flex(center);
+            flex-direction: column;
+            padding: 20px 0;
+        }
+        &__caption{
+                text-align: center;
+                order: 2;
+        }
+        .socials{
+            order: 1;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            &__item{
+                box-sizing: border-box;
+                display: inline-block;
+                text-align: center;
+                width: 32px; 
+                height: 32px;    
+                margin-right: 10px;
+            }
+            &__item:last-child{
+                margin-right: 10px;
+            }
+        }
+    }
 }
