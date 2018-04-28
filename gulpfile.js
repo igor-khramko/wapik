@@ -30,6 +30,11 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest('./build/fonts'));
 });
 
+gulp.task('js', function () {
+  return gulp.src('./src/scripts/**/*')
+    .pipe(gulp.dest('./build/scripts'));
+});
+
 gulp.task('browserSync', function () {   
   browserSync({
     server: {
@@ -38,14 +43,15 @@ gulp.task('browserSync', function () {
   })
 });
 
-gulp.task('watch', ['sass', 'pug', 'image', 'browserSync'], function () {   
-  gulp.watch('./src/styles/*.scss', ['sass']);
-  gulp.watch('./src/pages/*.pug', ['pug']);
-  gulp.watch('./src/images/*', ['image']);
-  gulp.watch('./src/fonts/*', ['fonts']);
-  gulp.watch('./build/*.html', browserSync.reload);
-  gulp.watch('./build/css//*.css').on("change", browserSync.reload);
-  gulp.watch('./build/js//*.js').on("change", browserSync.reload);
+gulp.task('watch', ['sass', 'pug', 'image', 'fonts', 'js', 'browserSync'], function () {   
+  gulp.watch('src/styles/*.scss', ['sass']);
+  gulp.watch('src/pages/*.pug', ['pug']);
+  gulp.watch('src/images/*', ['image']);
+  gulp.watch('src/fonts/*', ['fonts']);
+  gulp.watch('src/scripts/*', ['js']);
+  gulp.watch('build/*.html', browserSync.reload);
+  gulp.watch('build/css//*.css').on("change", browserSync.reload);
+  gulp.watch('build/scripts/*').on("change", browserSync.reload);
 });
 
 gulp.task('default', ['watch']);

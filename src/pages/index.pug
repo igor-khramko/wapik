@@ -17,13 +17,13 @@ body
                     .header__navigation
                         ul.navigation.navigation_light
                             li.navigation__item
-                                a.link(href='index.html') Home
+                                a.link.navigation__link(href='index.html') Home
                             li.navigation__item
-                                a.link(href='about-us.html') About us
+                                a.link.navigation__link(href='about-us.html') About us
                             li.navigation__item
-                                a.link(href='pricing.html') Pricing
+                                a.link.navigation__link(href='pricing.html') Pricing
                             li.navigation__item
-                                a.link(href='contact-us.html') Contact us
+                                a.link.navigation__link(href='contact-us.html') Contact us
                     button.header__get-started-button.button.button_hover-transparent(name='Get started',value='Get started') Get started
                     .header__navigation-icon &#xf394;
     section.masthead
@@ -217,3 +217,5 @@ body
                     a.link.socials__item.instagram(href="http://instagram.com", title="Our Instagram") &#xf351;
                     a.link.socials__item.dribbble(href="http://dribbble.com", title="Our Dribbble") &#xf22c;
                     a.link.socials__item.github(href="http://github.com", title="Our Github") &#xf4e8;
+    script(src="../scripts/headerNavigation.js")
+    script(src="../scripts/mouseClick.js")

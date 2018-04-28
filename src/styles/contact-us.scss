@@ -6,7 +6,6 @@
         height: 65vh;
     }
 }
-
 .feedback{
     &__content{
         padding: 85px 0 105px;
@@ -19,12 +18,13 @@
     }
     &__form-item{
         display: block;
-        border: 1px solid rgb(193, 211, 210);
-        background-color: rgb(255, 255, 255);
+        box-sizing: border-box;
+        border: 1px solid $lightblue-color;
+        background-color: #fff;
         box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12);
         font-size: 14px;
         font-family: "RobotoReguar";
-        color: rgb(131, 167, 165);
+        color: $aquamarine-color;
         line-height: 1;
         padding: 16px 0 16px 20px;
         width: 100%;
@@ -33,19 +33,19 @@
     }
     &__send-message-button{
         &_green{
-            background-color: rgb(111, 176, 72);
+            background-color: $lightgreen-color;
         }
         &_green:hover{
-            border: 2px solid rgb(111, 176, 72);
-            color: rgb(111, 176, 72);
+            border: 2px solid $lightgreen-color;
+            color: $lightgreen-color;
             background-color: transparent;
         }
     }
     .headquarter{
         width: 30%;
         padding: 40px 40px 60px;
-        border: 2px dashed rgb(193, 211, 210);
-        background-color: rgb(255, 255, 255);
+        border: 2px dashed $lightblue-color;
+        background-color: #fff;
         margin-bottom: 135px;
         font-family: "RobotoRegular";
         font-size: 15px;
@@ -55,12 +55,12 @@
         &__header{
             font-size: 22px;
             font-family: "RobotoLight";
-            color: rgb(15, 95, 92);
+            color: $dark-teal-color;
             text-transform: uppercase;
             line-height: 0.955;
         }
         &__address{
-            color: rgb(131, 167, 165);
+            color: $aquamarine-color;
             line-height: 1.4;
             margin: 30px 0;
         }
@@ -68,25 +68,25 @@
             content: "\f456";
             @include icons(15px);
             margin-right: 15px;
-            color: rgb(111, 176, 72);
+            color: $lightgreen-color;
         }
         &__phone-number{
-            color: rgb(131, 167, 165);
+            color: $aquamarine-color;
         }
         &__phone-number::before{
             content: "\f4b9";
             @include icons(15px);
             margin-right: 15px;
-            color: rgb(111, 176, 72);
+            color: $lightgreen-color;
         }
         &__email{
-            color: rgb(15, 95, 92);
+            color: $dark-teal-color;
         }
         &__email::before{
             content: "\f132";
             @include icons(15px);
             margin-right: 15px;
-            color: rgb(111, 176, 72);
+            color: $lightgreen-color;
         }
     }
 }

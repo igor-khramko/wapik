@@ -5,7 +5,7 @@ head
     meta(name='viewport', content='initial-scale=1')
     link(rel='stylesheet', type='text/css', href='styles/main.css')
 body
-    section.header.header_sticky
+    section.header.header_sticky.header_lightsmoke-bg
         .container
             .header__content.header__content_dark
                 .header__left
@@ -17,15 +17,16 @@ body
                     .header__navigation
                         ul.navigation.navigation_dark
                             li.navigation__item
-                                a.link(href='index.html') Home
+                                a.link.navigation__link(href='index.html') Home
                             li.navigation__item
-                                a.link(href='about-us.html') About us
+                                a.link.navigation__link(href='about-us.html') About us
                             li.navigation__item
-                                a.link(href='pricing.html') Pricing
+                                a.link.navigation__link(href='pricing.html') Pricing
                             li.navigation__item
-                                a.link(href='contact-us.html') Contact us
-                            button.button.header__get-started-button.header__get-started-button_green.button_hover-green(name='Get started',value='Get started') Get started
-    section.pricing.pricing-page
+                                a.link.navigation__link(href='contact-us.html') Contact us
+                    button.button.header__get-started-button.header__get-started-button_green.button_hover-green(name='Get started',value='Get started') Get started
+                    .header__navigation-icon.header__navigation-icon_dark &#xf394;
+    section.pricing.pricing_dark-bg
         .container
             .pricing__content
                 .section__heading
@@ -142,3 +143,5 @@ body
                     a.link.socials__item.instagram(href="http://instagram.com", title="Our Instagram") &#xf351;
                     a.link.socials__item.dribbble(href="http://dribbble.com", title="Our Dribbble") &#xf22c;
                     a.link.socials__item.github(href="http://github.com", title="Our Github") &#xf4e8;
+    script(src="../scripts/headerNavigation.js")
+    script(src="../scripts/mouseClick.js")

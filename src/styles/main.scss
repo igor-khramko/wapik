@@ -9,7 +9,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: $main-bg-color;
+    background-color: $main-bg-light-color;
     // font-weight: bold;
 }
 
@@ -33,7 +33,7 @@ body{
     font-size: 13px;
     font-family: "Montserrat";
     font-weight: bold;
-    color: rgb(255, 255, 255);
+    color: #fff;
     text-transform: uppercase;
     text-align: center;
     border-radius: 2px;
@@ -62,6 +62,9 @@ body{
         color: #fff;
         background-color: transparent;
     }
+    &_clicked{
+        border: 2px solid rgb(111, 176, 72);
+    }
 }
 
 .header{
@@ -72,11 +75,14 @@ body{
     &_sticky{
         position: sticky;
     }
+    &_lightsmoke-bg{
+        background-color: $second-bg-darker-color;
+    }
     &_dark-bg{
         background: linear-gradient(180deg, $header-gradient-color, transparent);
     }
     &_light-bg{
-        background: $main-bg-color;
+        background: $main-bg-light-color;
     }
     &__content{
         @include flex(space-between);
@@ -154,6 +160,10 @@ body{
         @include icons(26px);
         margin-left: 15px;
         display:none;
+        cursor: pointer;
+        &_dark{
+            color: rgb(131, 167, 165);
+        }
     }
     &__get-started-button{
         font-size: 12px;
@@ -174,13 +184,13 @@ body{
     &__header{
         font-size: 38px;
         font-family: "RobotoRegular";
-        color: rgb(255, 255, 255);
+        color: #fff;;
         line-height: 1;
     }
     &__description{
         font-size: 16px;
         font-family: "RobotoRegular";
-        color: rgb(255, 255, 255);
+        color: #fff;
         line-height: 1.5;
         margin: 20px 0;
     }
@@ -217,6 +227,9 @@ body{
 .about-us{
     &__content{
         padding: 100px 0 130px;
+    }
+    &__content_page{
+        padding: 100px 0 105px;
     }
     .best-features{
         @include flex(space-between);
@@ -289,7 +302,7 @@ body{
 }
 .presentation{
     box-sizing: border-box;
-    background-color: #eef1ec;
+    background-color: $second-bg-darker-color;
     .section-description-presentation{
         margin-bottom: 0;
     }
@@ -379,7 +392,7 @@ body{
     background-image: url(../images/map.png);
     background-position: calc(50% + 390px) center;
     background-repeat: no-repeat;   
-    background-color: rgb(238, 241, 236);
+    background-color: $second-bg-darker-color;
     &__content{
         @include flex(flex-start);
     }
@@ -406,6 +419,9 @@ body{
     &__content{
         padding-top: 100px;
     }
+    &_dark-bg{
+        background-color: $second-bg-darker-color;
+    }
     &__plans{
         @include flex(center);
         flex-wrap: wrap;
@@ -417,7 +433,6 @@ body{
         border: 1px solid rgb(193, 211, 210);
         background-color: #fff;
         text-align: center;
-        
         &__header{
             font-size: 15px;
             font-family: "RobotoMedium";
@@ -757,6 +772,11 @@ body{
             padding: 90px 0;
         }
     }
+    .contact-us{
+        &__title{
+            width: 100%;
+        }
+    }
     .call-to-action{
         &__content{
             @include flex(center);
@@ -775,6 +795,15 @@ body{
     .teammate:last-child{
         margin-bottom: 0;
     }
+    .feedback{
+        .headquarter{
+            width: 30%;
+            padding: 40px;
+            &__content{
+                width: 55%;
+            }
+        }
+    }
 }
 
 @media (max-width: 850px){
@@ -782,7 +811,7 @@ body{
         &__content{
             padding: 0 22px;
         }
-        &__navigation{
+        .navigation{
             display: none;
         }
         &__navigation-icon{
@@ -791,7 +820,27 @@ body{
         &__get-started-button{
             margin-left: 15px;
         }
+        &__navigation_visible{
+            .navigation{
+                position: absolute;
+                display: block;
+                right: 10px;
+                top: 110px;
+                border: 2px solid #fff;
+                background-color: transparent;
+                color: #6fb048;
+                &__item{
+                    
+                    margin: 0;
+                }
+                &__link{
+                    display: block;
+                    padding: 10px 15px; 
+                }
+            }
+        }
     }
+    
     .masthead{
         &__caption{
             padding: 200px 0 150px;
@@ -900,6 +949,41 @@ body{
             margin: 0;
         }
     }
+    .feedback{
+        &__content{
+            padding: 70px 0;
+        }
+        &__info{
+            @include flex(center);
+        }
+        &__form{
+            width: 90%;
+            order: 2;
+        }
+        .headquarter{
+            order: 1;
+            width: 80%;
+            margin-bottom: 40px;
+            &__content{
+                width: 100%;
+            }
+            &__address{
+                margin: 30px 0;
+            }
+            &__address::before{
+                margin-right: 15px;
+            }
+            &__phone-number::before{
+                margin-right: 15px;
+            }
+            &__email{
+                color: $dark-teal-color;
+            }
+            &__email::before{
+                margin-right: 15px;
+            }
+        }
+    }
 }
 
 @media (max-width: 668px){
@@ -984,8 +1068,8 @@ body{
             flex-direction: column;
         }
         &__item{
-            width: 95%;
-            max-width: 330px;
+            width: 100%;
+            max-width: 300px;
             align-self: flex-start;
         }
         &__item:nth-child(2n){
@@ -1037,11 +1121,16 @@ body{
         }
         &__item{
             width: 100%;
-            max-width: 330px;
+            max-width: 300px;
             align-self: none;
         }
         &__item:nth-child(2n){
             align-self: none;
+        }
+    }
+    .pricing{
+        .plan{
+            width: 100%;
         }
     }
     .copyright{

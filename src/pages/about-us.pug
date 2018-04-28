@@ -10,21 +10,22 @@ body
             .header__content
                 .header__left
                     .header__company-name Wapik
-                    .header__phone-number
+                    a.link.header__phone-number
                         span.header__phone-icon &#xf4b9;
                         |+62 202 555 0117
                 .header__right
                     .header__navigation
                         ul.navigation.navigation_light
                             li.navigation__item
-                                a.link(href='index.html') Home
+                                a.link.navigation__link(href='index.html') Home
                             li.navigation__item
-                                a.link(href='about-us.html') About us
+                                a.link.navigation__link(href='about-us.html') About us
                             li.navigation__item
-                                a.link(href='pricing.html') Pricing
+                                a.link.navigation__link(href='pricing.html') Pricing
                             li.navigation__item
-                                a.link(href='contact-us.html') Contact us
-                            button.button.header__get-started-button.button_hover-transparent(name='Get started',value='Get started') Get started
+                                a.link.navigation__link(href='contact-us.html') Contact us
+                    button.header__get-started-button.button.button_hover-transparent(name='Get started',value='Get started') Get started
+                    .header__navigation-icon &#xf394;
     section.masthead-about-us
         .container
             .masthead-about-us__content
@@ -33,12 +34,12 @@ body
                     button.masthead__learn-more-button.button.button_green.button_hover-transparent(name="Start your free trial", value="Start your free trial") Start your free trial
     section.about-us
         .container
-            .about-us__content
+            .about-us__content_page
                 .section__heading
                     .section__title About us
                     .section__underline
                     .section__description Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.
-                .about-us__best-features
+                .about-us__features.best-features
                     .best-features__feature
                         .best-features__icon &#xf14b;
                         .best-features__header Ionicons
@@ -123,3 +124,5 @@ body
                     a.link.socials__item.instagram(href="http://instagram.com", title="Our Instagram") &#xf351;
                     a.link.socials__item.dribbble(href="http://dribbble.com", title="Our Dribbble") &#xf22c;
                     a.link.socials__item.github(href="http://github.com", title="Our Github") &#xf4e8;
+    script(src="../scripts/headerNavigation.js")
+    script(src="../scripts/mouseClick.js")

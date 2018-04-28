@@ -17,14 +17,15 @@ body
                     .header__navigation
                         ul.navigation.navigation_dark
                             li.navigation__item
-                                a.link(href='index.html') Home
+                                a.link.navigation__link(href='index.html') Home
                             li.navigation__item
-                                a.link(href='about-us.html') About us
+                                a.link.navigation__link(href='about-us.html') About us
                             li.navigation__item
-                                a.link(href='pricing.html') Pricing
+                                a.link.navigation__link(href='pricing.html') Pricing
                             li.navigation__item
-                                a.link(href='contact-us.html') Contact us
-                            button.header__get-started-button.button.header__get-started-button_green.button_hover-green(name='Get started',value='Get started') Get started
+                                a.link.navigation__link(href='contact-us.html') Contact us
+                    button.header__get-started-button.button.header__get-started-button_green.button_hover-green(name='Get started',value='Get started') Get started
+                    .header__navigation-icon.header__navigation-icon_dark &#xf394;
     section.masthead-map
         iframe.masthead-map__content(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9406.191369661386!2d27.609909!3d53.886466!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x817b228ea6dc30f0!2z0KHRgtC-0YDQvNC90Y3RgiDQotC10LrQvdC-0LvQvtC00LbQuNGBIChTdG9ybW5ldCk!5e0!3m2!1sru!2sby!4v1523645722435", frameborder="0", allowfullscreen)
     section.feedback
@@ -99,3 +100,5 @@ body
                     a.link.socials__item.instagram(href="http://instagram.com", title="Our Instagram") &#xf351;
                     a.link.socials__item.dribbble(href="http://dribbble.com", title="Our Dribbble") &#xf22c;
                     a.link.socials__item.github(href="http://github.com", title="Our Github") &#xf4e8;
+    script(src="../scripts/headerNavigation.js")
+    script(src="../scripts/mouseClick.js")

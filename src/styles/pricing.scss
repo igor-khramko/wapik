@@ -1,13 +1,2 @@
 @import 'icons';
 @import 'flex';
-.header{
-    position: sticky;
-    background-color: $whitesmoke-color;
-}
-.pricing-page{
-    background-color: $whitesmoke-color;
-    &__title{
-        width: 50%;
-        margin: 0 auto; 
-    }
-}

@@ -1,10 +1,11 @@
-$header-gradient-color: rgba(128, 128, 128, 0.8);
-$main-bg-color: #fff;
 $whitesmoke-color: #eef1ec;
 $lightblue-color: #c1d3d2;
 $aquamarine-color:  #83a7a5;
-$lightgreen-color: rgb(111, 176, 72);
+$lightgreen-color: #6fb048;
 $dark-teal-color:  #0f5f5c;
+$header-gradient-color: hsla(0, 0%, 50%, 0.8);
+$main-bg-light-color: #fff;
+$second-bg-darker-color: $whitesmoke-color;
 $section-description-color: $aquamarine-color;
 $testimonial-description-color: $aquamarine-color;
 $testimonial-position-font-color: $aquamarine-color;
