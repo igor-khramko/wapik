@@ -6,7 +6,7 @@
 @import 'contact-us';
 @mixin masthead-bg($masthead-bg-url){
     background: url($masthead-bg-url) no-repeat;
-    box-shadow: inset 0 0 0 1000px rgba(15,95,92,0.8);
+    box-shadow: inset 0 0 0 1000px $masthead-inset-shadow;
     background-size: cover;
 }
 body{
@@ -34,7 +34,7 @@ body{
     font-size: 13px;
     font-family: "font-button-menu-numbers";
     font-weight: bold;
-    color: #fff;
+    color: $button-font-color;
     text-transform: uppercase;
     text-align: center;
     border-radius: 2px;
@@ -45,26 +45,22 @@ body{
     box-sizing: border-box;
     outline: none;
     &_green{
-        background-color: rgb(111, 176, 72);
+        background-color: $lightgreen-color;
     }
     &_dark-green{
-        background-color: rgb(73, 115, 47);
+        background-color: $dark-green-btn-bg;
     }
     &_hover-green:hover{
-        border: 2px solid rgb(111, 176, 72);
-        color: rgb(111, 176, 72);
+        border: 2px solid $lightgreen-color;
+        color: $lightgreen-color;
         background-color: transparent;
         transition: all 300ms ease;
     }
     &_hover-transparent:hover{
-        border: 2px solid #fff;
-        color: #fff;
+        border: 2px solid $hover-transparent-button-border;
+        color: $hover-transparent-button-font;
         background-color: transparent;
         transition: all 300ms ease;
-    }
-    &_clicked{
-        border: 2px solid rgb(14, 83, 81);
-        color: rgb(14, 83, 81);
     }
 }
 
@@ -87,7 +83,7 @@ body{
         background: $main-bg-light-color;
     }
     &_dark-scrolled{
-        background: rgba(15, 95, 92, 0.8);
+        background: $masthead-inset-shadow;
         .header__content{
             padding: 20px 0;
         }
@@ -96,7 +92,7 @@ body{
         @include flex(space-between);
         transition: all 0.5s;
         padding: 32px 0;
-        color: #fff;
+        color: $header-content-font-color;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         &_dark{
             border-bottom: 1px solid rgba(131, 167, 165, 0.502);
@@ -115,7 +111,7 @@ body{
         padding: 0;
         margin-right: 25px;
         &_dark{
-            color: rgb(15, 95, 92);
+            color: $dark-heading-color;
         }
     }      
     &__phone-number{
@@ -126,14 +122,14 @@ body{
         padding-left: 25px;
         border-left: 1px solid rgba(255, 255, 255, 0.2);  
         &_dark{
-            color: rgb(131, 167, 165);
+            color: $dark-theme-font-color;
         }
     }
     &__phone-icon{
         @include icons(14px);
         margin-right: 6px;
         &_dark{
-            color: rgb(131, 167, 165);
+            color: $dark-theme-font-color;
         }
     }
     .navigation{
@@ -153,12 +149,12 @@ body{
                 color: rgba(255, 255, 255, 0.702);
             }
             .navigation__item:hover{
-                color: #fff;
+                color: $navigation-light-item-hover-font;
             }
         }
         &_dark {
             .navigation__item{
-                color: rgb(131, 167, 165);
+                color: $dark-theme-font-color;
             }
             .navigation__item:hover{
                 color: rgb(144, 185, 183);
@@ -171,7 +167,7 @@ body{
         display:none;
         cursor: pointer;
         &_dark{
-            color: rgb(131, 167, 165);
+            color: $dark-theme-font-color;
         }
     }
     &__get-started-button{
@@ -179,7 +175,7 @@ body{
         background-color: rgba(255, 255, 255, 0.35);
         padding: 11px 13px;
         &_green{
-            background-color: rgb(111, 176, 72);
+            background-color: $lightgreen-color;
         }
     }
 }
@@ -193,13 +189,13 @@ body{
     &__header{
         font-size: 38px;
         font-family: "main-text-font";
-        color: #fff;;
+        color: $masthead-header-font;
         line-height: 1;
     }
     &__description{
         font-size: 16px;
         font-family: "main-text-font";
-        color: #fff;
+        color: $masthead-description-font;
         line-height: 1.5;
         margin: 20px 0;
     }
@@ -217,7 +213,7 @@ body{
         &__header{
             font-size: 50px;
             font-family: "header-font";
-            color: #fff;
+            color: $about-us-header-font;
             line-height: 1.2;
             margin-bottom: 20px;
         }
@@ -226,7 +222,7 @@ body{
 .section__title{
     font-size: 32px;
     font-family: "header-font";
-    color: $section-title-color;
+    color: $dark-heading-color;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -264,7 +260,7 @@ body{
         }
         &__icon{
             @include icons(56px);
-            color: #6fb048;
+            color: $lightgreen-color;
             text-align: center;
             line-height: 1;
             margin-bottom: 25px;
@@ -273,7 +269,7 @@ body{
         &__header{
             font-size: 16px;
             font-family: "main-text-font";
-            color: rgb(15, 95, 92);
+            color: $dark-heading-color;
             line-height: 1.25;
             text-align: center; 
             margin-bottom: 20px;
@@ -281,7 +277,7 @@ body{
         &__description{
             font-size: 14px;
             font-family: "main-text-font";
-            color: rgb(131, 167, 165);
+            color: $description-font-color;
             line-height: 1.571;
             text-align: center;
         }
@@ -304,7 +300,7 @@ body{
         }
         &__icon{
             @include icons(38px);
-            color: #6fb048;
+            color: $lightgreen-color;
             text-align: center;
             line-height: 1;
             flex-basis: 48px;
@@ -313,14 +309,14 @@ body{
         &__header{
             font-size: 16px;
             font-family: "main-text-font";
-            color: rgb(15, 95, 92);
+            color: $dark-heading-color;
             line-height: 1.25;
             flex-basis: 85%;
         }
         &__description{
             font-size: 14px;
             font-family: "main-text-font";
-            color: rgb(131, 167, 165);
+            color: $description-font-color;
             line-height: 1.571;
         }
     }
@@ -341,13 +337,11 @@ body{
         background-repeat: no-repeat;
         background-position: -100px calc(100% + 140px);
     }
-    .phone__screen{
+    .phone{
         position: absolute;
         left: 160px;
         bottom: 125px; 
-        .hide-screen{
-            opacity: 100%;
-        }
+        cursor: pointer;
     }
     .hide-screen{
         display: none;
@@ -359,25 +353,25 @@ body{
     &__header{
         font-size: 32px;
         font-family: "header-font";
-        color: rgb(15, 95, 92);
+        color: $dark-heading-color;
     }
     &__description{
         padding: 15px 0;
         font-size: 14px;
         font-family: "main-text-font";
-        color: rgb(131, 167, 165);
+        color: $description-font-color;
         line-height: 1.571;
     }
     &__item{
         font-size: 14px;
         font-family: "main-text-font";
-        color: rgb(131, 167, 165);
+        color: $description-font-color;
     }
     
     &__item::before{
         content: "\f3fe";
         @include icons(26px);
-        color: rgb(131, 167, 165);
+        color: $description-font-color;
         margin-right: 12px;   
     }
 }
@@ -434,14 +428,14 @@ body{
     &__header{
         font-size: 32px;
         font-family: "header-font";
-        color: rgb(15, 95, 92);
+        color: $dark-heading-color;
         line-height: 1;
         margin-bottom: 20px;
     }
     &__description{
         font-size: 14px;
         font-family: "main-text-font";
-        color: rgb(131, 167, 165);
+        color: $description-font-color;
         line-height: 1.714;          
     }
 }
@@ -462,69 +456,67 @@ body{
         width: 26%;
         padding: 30px 0;
         border: 1px solid rgb(193, 211, 210);
-        background-color: #fff;
+        background-color: $plan-bg-color;
         text-align: center;
         &__header{
             font-size: 15px;
             font-family: "header-font";
-            color: rgb(111, 176, 72);
+            color: $lightgreen-color;
             text-transform: uppercase;
             margin-bottom: 30px;
         }
         &__price{
             font-size: 65px;
             font-family: "font-button-menu-numbers";
-            color: rgb(15, 95, 92);
+            color: $dark-heading-color;
             line-height: 1;             
         }
         &__duration{
             font-size: 14px;
             font-family: "main-text-font";
-            color: rgb(15, 95, 92);
+            color: $dark-heading-color;
         }
         &__options{
             font-size: 14px;
             font-family: "main-text-font";
-            color: rgb(131, 167, 165);
+            color: $description-font-color;
             line-height: 2;
             margin: 28px 0;
         }
         &__select-button{
-            background-color: $aquamarine-color;
+            background-color: $select-plan-hover-btn-bg;
             padding: 16px 25px;
         }
         
     }
     .plan:hover{
-        background-color: $aquamarine-color;
+        background-color: $plan-hover-bg;
         .plan__header{
-            color: #fff;
+            color: $plan-hover-header;
         }
         .plan__price{
-            color: #fff;
+            color: $plan-hover-price;
         }
         .plan__duration{
-            color: #fff;
+            color: $plan-hover-duration;
         }
         .plan__options{
-            color: #fff;
+            color: $plan-hover-options;
         }
         .plan__select-button{
-            background-color: rgb(111, 176, 72);
-            color: #fff;
-            
-        box-sizing: border-box;
+            background-color: $lightgreen-color;
+            color: $plan-hover-select-button;            
+            box-sizing: border-box;
         }
         .plan__select-button:hover{
             background-color: transparent;
-            color: #fff;
-            border: 2px solid #fff;
+            border: 2px solid $plan-select-button-border-hover;
         }
     }
     &__description{
         font-size: 14px;
         font-family: "main-text-font";
-        color: rgb(131, 167, 165);
+        color: $description-font-color;
         text-align: center;
         padding: 30px 0 65px;
     }
@@ -537,7 +529,7 @@ body{
     &__title{
         font-size: 22px;
         font-family: "header-font";
-        color: rgb(15, 95, 92);
+        color: $dark-heading-color;
         text-align: center;
         font-weight: bold;
     }
@@ -549,13 +541,13 @@ body{
         width: 30%;
         font-size: 14px;
         font-family: "main-text-font";
-        color: rgb(131, 167, 165);
+        color: $description-font-color;
         line-height: 2.571;
     }
     &__item::before{
         content: "\f122";
         border-radius: 50%;
-        border: 1px solid rgb(131, 167, 165);
+        border: 1px solid $description-font-color;
         @include icons(14px);
         margin-right: 10px;
         padding: 6px;
@@ -569,7 +561,7 @@ body{
         width: 25%;
     }
     &__title:hover{
-        color: #6fb048;
+        color: $lightgreen-color;
         text-decoration: none;
     }
     &__content{
@@ -579,7 +571,7 @@ body{
         display: block;
         font-size: 18px;
         font-family: "main-text-font";
-        color: rgb(15, 95, 92);
+        color: $dark-heading-color;
         line-height: 1.111;
         text-align: center;
     }
@@ -601,17 +593,17 @@ body{
     &__header{
         font-size: 28px;
         font-family: "header-font";
-        color: rgb(15, 95, 92);
+        color: $dark-heading-color;
         &_light{
-            color: #fff;
+            color: $call-to-action-header-light;
         }
     }
     &__description{
         font-family: "main-text-font";
-        color: rgb(131, 167, 165);
+        color: $description-font-color;
         line-height: 1.467;
         &_light{
-            color: #fff;
+            color: $call-to-action-description-light;
         }
     }
     &__download-button{
@@ -632,16 +624,16 @@ body{
         &__header{
             font-size: 13px; 
             font-family: "main-text-font";
-            color: rgb(15, 95, 92);
+            color: $dark-heading-color;
             margin-bottom: 25px;
         }
         &__email-address{
-            color: rgb(15, 95, 92);
+            color: $dark-heading-color;
         }
         &__data-row{
             font-size: 13px;
             font-family: "main-text-font";
-            color: rgb(131, 167, 165);
+            color: $description-font-color;
             margin-bottom: 15px;
         }
         &__data-row:last-child{
@@ -653,7 +645,7 @@ body{
         &__description{
             font-size: 13px;
             font-family: "main-text-font";
-            color: rgb(131, 167, 165);
+            color: $description-font-color;
             line-height: 1.385;
             margin-bottom: 20px;
         }
@@ -669,7 +661,7 @@ body{
         background-color: rgb(238, 241, 236);
         font-size: 13px;
         font-family: "main-text-font";
-        color: rgb(131, 167, 165);
+        color: $description-font-color;
         line-height: 1;
         padding: 11px;
         width: 80%;
@@ -691,7 +683,7 @@ body{
         outline: none;
     }
     &__email-submit-button:hover{
-        color: $dark-teal-color;
+        color: $dark-heading-color;
     }
 }
 .copyright{
@@ -704,7 +696,7 @@ body{
     &__caption{
             font-size: 12px;
             font-family: "main-text-font";
-            color: rgb(131, 167, 165);
+            color: $description-font-color;
             line-height: 1.5;
             text-align: left;
     }
@@ -719,7 +711,7 @@ body{
             height: 32px; 
             padding: 7px;
             border: 1px solid transparent;    
-            color: #fff;  
+            color: $socials-items-font;  
             margin-right: 10px;
         }
         &__item:last-child{
@@ -770,19 +762,19 @@ body{
 :-moz-placeholder{
     font-size: 13px;
     font-family: "main-text-font";
-    color: rgb(131, 167, 165);
+    color: $description-font-color;
     line-height: 1.385;
 }
 :-ms-input-placeholder{
     font-size: 13px;
     font-family: "main-text-font";
-    color: rgb(131, 167, 165);
+    color: $description-font-color;
     line-height: 1.385;
 }
 ::-webkit-input-placeholder{
     font-size: 13px;
     font-family: "main-text-font";
-    color: rgb(131, 167, 165);
+    color: $description-font-color;
     line-height: 1.385;
 }
 
@@ -849,23 +841,23 @@ body{
                 display: block;
                 right: 20px;
                 top: 130px;
-                border: 2px solid #fff;
+                border: 2px solid $navigation-adaptive-border;
                 background-color: transparent;
-                color: #6fb048;
+                color: $lightgreen-color;
             }
             &_adaptive-dark{
                 position: absolute;
                 display: block;
                 right: 20px;
                 top: 130px;
-                border: 2px solid $dark-teal-color;
-                background: rgba(15, 95, 92, 0.8);
-                color: #fff;
+                border: 2px solid $dark-heading-color;
+                background: $masthead-inset-shadow;
+                color: $navigation-adaptive-dark-font;
                     .navigation__item{
                         color: rgba(255, 255, 255, 0.702);
                     }
                     .navigation__item:hover{
-                        color: #fff;
+                        color: $border-adaptive-navigation;
                     }
                 }
             &__item{
@@ -917,7 +909,7 @@ body{
             @include flex(center);
             background-position: 0 calc(100% + 140px);
         }
-        .phone__screen{
+        .phone{
             left: 260px;
             bottom: 125px; 
         }
@@ -1029,7 +1021,7 @@ body{
                 margin-right: 15px;
             }
             &__email{
-                color: $dark-teal-color;
+                color: $dark-heading-color;
             }
             &__email::before{
                 margin-right: 15px;
@@ -1061,7 +1053,7 @@ body{
         &__body{
             background-position: -100px calc(100% + 140px);
         }
-        .phone__screen{
+        .phone{
             left: 160px;
             bottom: 125px; 
         }
@@ -1174,7 +1166,7 @@ body{
         &__body{
             background-image: none;
         }
-        .phone__screen{
+        .phone{
             display: none; 
         }
         &__caption{

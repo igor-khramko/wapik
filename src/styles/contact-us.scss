@@ -17,12 +17,12 @@
     &__form-item{
         display: block;
         box-sizing: border-box;
-        border: 1px solid $lightblue-color;
-        background-color: #fff;
+        border: 1px solid $feedback-form-item-border;
+        background-color: $feedback-form-item-bg;
         box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12);
         font-size: 14px;
         font-family: "main-text-font";
-        color: $aquamarine-color;
+        color: $feedback-form-item-color;
         line-height: 1;
         padding: 16px 0 16px 20px;
         width: 100%;
@@ -42,8 +42,8 @@
     .headquarter{
         width: 30%;
         padding: 40px 40px 60px;
-        border: 2px dashed $lightblue-color;
-        background-color: #fff;
+        border: 2px dashed $headquarter-border;
+        background-color: $headquarter-bg;
         margin-bottom: 135px;
         font-family: "main-text-font";
         font-size: 15px;
@@ -53,12 +53,12 @@
         &__header{
             font-size: 22px;
             font-family: "header-font";
-            color: $dark-teal-color;
+            color: $dark-heading-color;
             text-transform: uppercase;
             line-height: 0.955;
         }
         &__address{
-            color: $aquamarine-color;
+            color: $headquarter-address-font;
             line-height: 1.4;
             margin: 30px 0;
         }
@@ -69,7 +69,7 @@
             color: $lightgreen-color;
         }
         &__phone-number{
-            color: $aquamarine-color;
+            color: $headquarter-phone-number-font;
         }
         &__phone-number::before{
             content: "\f4b9";
@@ -78,7 +78,7 @@
             color: $lightgreen-color;
         }
         &__email{
-            color: $dark-teal-color;
+            color: $dark-heading-color;
         }
         &__email::before{
             content: "\f132";

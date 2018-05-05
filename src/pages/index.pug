@@ -83,9 +83,10 @@ body
                     .section__underline
                     .section__description.section-description-presentation Donec id elit non mi porta gravida at eget metus.
                 .presentation__body
-                    img.phone__screen(src="images/screen.png", alt="Uphone screen image")
-                    img.phone__screen.hide-screen(src="images/screen2.jpg", alt="Uphone screen image")
-                    img.phone__screen.hide-screen(src="images/screen3.jpg", alt="Uphone screen image")
+                    .presentation__phone.phone
+                        img.phone__screen(src="images/screen.png")
+                        img.phone__screen.hide-screen(src="images/screen2.jpg")
+                        img.phone__screen.hide-screen(src="images/screen3.jpg")
                     .presentation__caption
                         .presentation__header Responsive Ready
                         .presentation__description Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper.
@@ -223,6 +224,5 @@ body
     script(src="scripts/headerNavigation.js")
     script(src="scripts/activeMenu.js")
     script(src="scripts/changePhoneScreen.js")
-    script(src="scripts/mouseClick.js")
     script(src="scripts/headerScroll.js")
     script(src="scripts/headerMenuScroll.js")

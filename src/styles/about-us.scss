@@ -1,5 +1,5 @@
 .our-team{
-    background-color: $whitesmoke-color;
+    background-color: $second-bg-darker-color;
     &__content{
         padding: 80px 0 120px;
     }
@@ -27,14 +27,14 @@
             &__name{
                 font-size: 15px;
                 font-family: "author-name";
-                color: rgb(15, 95, 92);
+                color: $dark-heading-color;
                 line-height: 1.467;
                 margin-left: 10px;
             }
             &__position{
                 font-size: 14px;
                 font-family: "main-text-font";
-                color: rgb(131, 167, 165);
+                color: $description-font-color;
                 line-height: 1.571;
                 margin-left: 10px;
             }     
