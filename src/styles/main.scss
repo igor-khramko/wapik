@@ -844,6 +844,37 @@ body{
     .header{
         .navigation{
             display: none;
+            &_adaptive{
+                position: absolute;
+                display: block;
+                right: 20px;
+                top: 130px;
+                border: 2px solid #fff;
+                background-color: transparent;
+                color: #6fb048;
+            }
+            &_adaptive-dark{
+                position: absolute;
+                display: block;
+                right: 20px;
+                top: 130px;
+                border: 2px solid $dark-teal-color;
+                background: rgba(15, 95, 92, 0.8);
+                color: #fff;
+                    .navigation__item{
+                        color: rgba(255, 255, 255, 0.702);
+                    }
+                    .navigation__item:hover{
+                        color: #fff;
+                    }
+                }
+            &__item{
+                margin: 0;
+            }
+            &__link{
+                display: block;
+                padding: 10px 15px; 
+            }
         }
         &__navigation-icon{
             display:block;
@@ -851,26 +882,7 @@ body{
         &__get-started-button{
             margin-left: 15px;
         }
-        &__navigation_visible{
-            .navigation{
-                position: absolute;
-                display: block;
-                right: 10px;
-                top: 110px;
-                border: 2px solid #fff;
-                background-color: transparent;
-                color: #6fb048;
-                &__item{
-                    margin: 0;
-                }
-                &__link{
-                    display: block;
-                    padding: 10px 15px; 
-                }
-            }
-        }
     }
-    
     .masthead{
         &__caption{
             padding: 200px 0 150px;

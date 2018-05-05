@@ -13,18 +13,20 @@ function headerScrolledStyles(){
             header.classList.toggle("header_dark-scrolled"); 
         } 
     } else if (header.classList.contains("header_lightsmoke-bg") || header.classList.contains("header_light-bg")) { 
-
+        
         const companyName = document.querySelector(".header__company-name"); 
         const phoneIcon = document.querySelector(".header__phone-icon"); 
         const phoneNumber = document.querySelector(".header__phone-number"); 
-        const navigation = document.querySelector(".navigation") 
+        const menu = document.querySelector(".navigation");
+        
 
         if(!scrollCondition){ 
             header.classList.toggle("header_dark-scrolled"); 
             companyName.classList.toggle("header__company-name_dark"); 
             phoneIcon.classList.toggle("header__phone-icon_dark"); 
             phoneNumber.classList.toggle("header__phone-number_dark"); 
-            navigation.classList.toggle("navigation_dark"); 
+            menu.classList.toggle("navigation_dark");
+            menu.classList.toggle("navigation_light");
         } 
     } 
 }
