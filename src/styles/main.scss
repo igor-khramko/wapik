@@ -1,16 +1,18 @@
 @import 'fonts';
 @import "variables";
 @import 'flex';
-@import 'masthead-bg';
+@import 'icons';
 @import 'about-us';
 @import 'contact-us';
-@import 'pricing';
-@import 'icons';
+@mixin masthead-bg($masthead-bg-url){
+    background: url($masthead-bg-url) no-repeat;
+    box-shadow: inset 0 0 0 1000px rgba(15,95,92,0.8);
+    background-size: cover;
+}
 body{
     margin: 0;
     padding: 0;
     background-color: $main-bg-light-color;
-    // font-weight: bold;
 }
 
 .container{
@@ -25,13 +27,12 @@ body{
 }
 
 .link:hover{
-    // text-decoration: underline;
     cursor: pointer;
 }
 
 .button{
     font-size: 13px;
-    font-family: "Montserrat";
+    font-family: "font-button-menu-numbers";
     font-weight: bold;
     color: #fff;
     text-transform: uppercase;
@@ -46,9 +47,6 @@ body{
     &_green{
         background-color: rgb(111, 176, 72);
     }
-    &_green-clicked{
-        border: 2px solid rgb(111, 176, 72);
-    }
     &_dark-green{
         background-color: rgb(73, 115, 47);
     }
@@ -56,14 +54,17 @@ body{
         border: 2px solid rgb(111, 176, 72);
         color: rgb(111, 176, 72);
         background-color: transparent;
+        transition: all 300ms ease;
     }
     &_hover-transparent:hover{
         border: 2px solid #fff;
         color: #fff;
         background-color: transparent;
+        transition: all 300ms ease;
     }
     &_clicked{
-        border: 2px solid rgb(111, 176, 72);
+        border: 2px solid rgb(14, 83, 81);
+        color: rgb(14, 83, 81);
     }
 }
 
@@ -72,6 +73,7 @@ body{
     top: 0;
     width: 100%;
     z-index: 100;
+    transition: all 2s;
     &_sticky{
         position: sticky;
     }
@@ -84,8 +86,16 @@ body{
     &_light-bg{
         background: $main-bg-light-color;
     }
+    &_dark-scrolled{
+        background: rgba(15, 95, 92, 0.8);
+        .header__content{
+            padding: 20px 0;
+        }
+    }
     &__content{
         @include flex(space-between);
+        transition: all 0.5s;
+        padding: 32px 0;
         color: #fff;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         &_dark{
@@ -95,11 +105,10 @@ body{
     &__left, &__right{
         display: flex;
         align-items: center;
-        padding: 32px 0;
     }
     &__company-name{
         font-size: 20px;
-        font-family: "ProximaNova";
+        font-family: "font-logo";
         text-transform: uppercase;
         font-weight: bold;
         line-height: 1.615;
@@ -111,7 +120,7 @@ body{
     }      
     &__phone-number{
         font-size: 13px;
-        font-family: "Montserrat";
+        font-family: "font-button-menu-numbers";
         text-transform: uppercase;
         line-height: 1.615;
         padding-left: 25px;
@@ -134,7 +143,7 @@ body{
         &__item{
             display: inline;
             font-size: 13px;
-            font-family: "Montserrat";
+            font-family: "font-button-menu-numbers";
             text-transform: uppercase;
             line-height: 1.615;
             margin-right: 30px;
@@ -183,13 +192,13 @@ body{
     }
     &__header{
         font-size: 38px;
-        font-family: "RobotoRegular";
+        font-family: "main-text-font";
         color: #fff;;
         line-height: 1;
     }
     &__description{
         font-size: 16px;
-        font-family: "RobotoRegular";
+        font-family: "main-text-font";
         color: #fff;
         line-height: 1.5;
         margin: 20px 0;
@@ -197,10 +206,26 @@ body{
     &__learn-more-button{
         font-size: 14px;
     }
+    &_about-us{
+        @include masthead-bg("../images/about-us-bg.png");
+        &__caption{
+            padding: 255px 0 165px;
+            text-align: center;
+            width: 75%;
+            margin: 0 auto;    
+        }
+        &__header{
+            font-size: 50px;
+            font-family: "header-font";
+            color: #fff;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+    }
 }
 .section__title{
     font-size: 32px;
-    font-family: "RobotoLight";
+    font-family: "header-font";
     color: $section-title-color;
     text-align: center;
     margin-bottom: 20px;
@@ -216,7 +241,7 @@ body{
 
 .section__description{
     font-size: 15px;
-    font-family: "RobotoRegular";
+    font-family: "main-text-font";
     color: $section-description-color;
     text-align: center;
     width: 50%;
@@ -247,7 +272,7 @@ body{
 
         &__header{
             font-size: 16px;
-            font-family: "RobotoRegular";
+            font-family: "main-text-font";
             color: rgb(15, 95, 92);
             line-height: 1.25;
             text-align: center; 
@@ -255,7 +280,7 @@ body{
         }
         &__description{
             font-size: 14px;
-            font-family: "RobotoRegular";
+            font-family: "main-text-font";
             color: rgb(131, 167, 165);
             line-height: 1.571;
             text-align: center;
@@ -287,14 +312,14 @@ body{
 
         &__header{
             font-size: 16px;
-            font-family: "RobotoRegular";
+            font-family: "main-text-font";
             color: rgb(15, 95, 92);
             line-height: 1.25;
             flex-basis: 85%;
         }
         &__description{
             font-size: 14px;
-            font-family: "RobotoRegular";
+            font-family: "main-text-font";
             color: rgb(131, 167, 165);
             line-height: 1.571;
         }
@@ -320,6 +345,12 @@ body{
         position: absolute;
         left: 160px;
         bottom: 125px; 
+        .hide-screen{
+            opacity: 100%;
+        }
+    }
+    .hide-screen{
+        display: none;
     }
     &__caption{
         padding: 150px 0 130px;
@@ -327,19 +358,19 @@ body{
     }
     &__header{
         font-size: 32px;
-        font-family: "RobotoLight";
+        font-family: "header-font";
         color: rgb(15, 95, 92);
     }
     &__description{
         padding: 15px 0;
         font-size: 14px;
-        font-family: "RobotoRegular";
+        font-family: "main-text-font";
         color: rgb(131, 167, 165);
         line-height: 1.571;
     }
     &__item{
         font-size: 14px;
-        font-family: "RobotoRegular";
+        font-family: "main-text-font";
         color: rgb(131, 167, 165);
     }
     
@@ -361,20 +392,20 @@ body{
         width: 48%;
         &__description{
             font-size: 22px;
-            font-family: "MerriweatherLight";
+            font-family: "font-testimonial-description";
             color: $testimonial-description-color;
             line-height: 1.818;
             margin-bottom: 35px;
         }
         &__author{
             font-size: 14px;
-            font-family: "RobotoMedium";
+            font-family: "author-name";
             color: $testimonial-author-font-color;
             line-height: 1.571;
         }
         &__position{
             font-size: 14px;
-            font-family: "RobotoRegular";
+            font-family: "main-text-font";
             line-height: 1.571;
             color: $testimonial-position-font-color;
         }
@@ -402,14 +433,14 @@ body{
     }
     &__header{
         font-size: 32px;
-        font-family: "RobotoLight";
+        font-family: "header-font";
         color: rgb(15, 95, 92);
         line-height: 1;
         margin-bottom: 20px;
     }
     &__description{
         font-size: 14px;
-        font-family: "RobotoRegular";
+        font-family: "main-text-font";
         color: rgb(131, 167, 165);
         line-height: 1.714;          
     }
@@ -435,25 +466,25 @@ body{
         text-align: center;
         &__header{
             font-size: 15px;
-            font-family: "RobotoMedium";
+            font-family: "header-font";
             color: rgb(111, 176, 72);
             text-transform: uppercase;
             margin-bottom: 30px;
         }
         &__price{
             font-size: 65px;
-            font-family: "Montserrat";
+            font-family: "font-button-menu-numbers";
             color: rgb(15, 95, 92);
             line-height: 1;             
         }
         &__duration{
             font-size: 14px;
-            font-family: "RobotoRegular";
+            font-family: "main-text-font";
             color: rgb(15, 95, 92);
         }
         &__options{
             font-size: 14px;
-            font-family: "RobotoRegular";
+            font-family: "main-text-font";
             color: rgb(131, 167, 165);
             line-height: 2;
             margin: 28px 0;
@@ -492,7 +523,7 @@ body{
     }
     &__description{
         font-size: 14px;
-        font-family: "RobotoRegular";
+        font-family: "main-text-font";
         color: rgb(131, 167, 165);
         text-align: center;
         padding: 30px 0 65px;
@@ -505,7 +536,7 @@ body{
     }
     &__title{
         font-size: 22px;
-        font-family: "Robotolight";
+        font-family: "header-font";
         color: rgb(15, 95, 92);
         text-align: center;
         font-weight: bold;
@@ -517,7 +548,7 @@ body{
     &__item{
         width: 30%;
         font-size: 14px;
-        font-family: "RobotoRegular";
+        font-family: "main-text-font";
         color: rgb(131, 167, 165);
         line-height: 2.571;
     }
@@ -547,7 +578,7 @@ body{
     &__email{
         display: block;
         font-size: 18px;
-        font-family: "RobotoRegular";
+        font-family: "main-text-font";
         color: rgb(15, 95, 92);
         line-height: 1.111;
         text-align: center;
@@ -569,14 +600,14 @@ body{
     }
     &__header{
         font-size: 28px;
-        font-family: "RobotoLight";
+        font-family: "header-font";
         color: rgb(15, 95, 92);
         &_light{
             color: #fff;
         }
     }
     &__description{
-        font-family: "RobotoRegular";
+        font-family: "main-text-font";
         color: rgb(131, 167, 165);
         line-height: 1.467;
         &_light{
@@ -600,7 +631,7 @@ body{
         box-sizing: border-box;
         &__header{
             font-size: 13px; 
-            font-family: "RobotoRegular";
+            font-family: "main-text-font";
             color: rgb(15, 95, 92);
             margin-bottom: 25px;
         }
@@ -609,7 +640,7 @@ body{
         }
         &__data-row{
             font-size: 13px;
-            font-family: "RobotoRegular";
+            font-family: "main-text-font";
             color: rgb(131, 167, 165);
             margin-bottom: 15px;
         }
@@ -621,7 +652,7 @@ body{
         }
         &__description{
             font-size: 13px;
-            font-family: "RobotoRegular";
+            font-family: "main-text-font";
             color: rgb(131, 167, 165);
             line-height: 1.385;
             margin-bottom: 20px;
@@ -637,7 +668,7 @@ body{
         border-radius: 3px 0 0 3px;
         background-color: rgb(238, 241, 236);
         font-size: 13px;
-        font-family: "RobotoRegular";
+        font-family: "main-text-font";
         color: rgb(131, 167, 165);
         line-height: 1;
         padding: 11px;
@@ -648,7 +679,7 @@ body{
     &__email-submit-button{
         @include icons(18px);
         text-align: center;
-        color: #6fb048;
+        color: $lightgreen-color;
         width: 20%;
         box-sizing: border-box;
         border: 0;
@@ -658,6 +689,9 @@ body{
         cursor: pointer;
         font-weight: bold;
         outline: none;
+    }
+    &__email-submit-button:hover{
+        color: $dark-teal-color;
     }
 }
 .copyright{
@@ -669,7 +703,7 @@ body{
     }
     &__caption{
             font-size: 12px;
-            font-family: "RobotoRegular";
+            font-family: "main-text-font";
             color: rgb(131, 167, 165);
             line-height: 1.5;
             text-align: left;
@@ -692,62 +726,62 @@ body{
             margin-right: 0;
         }
         .twitter{
-            background-color: #55acee;
+            background-color: $twitter-bg-color;
         }
         .twitter:hover{
-            border: 1px solid #55acee;    
-            color: #55acee;
+            border: 1px solid $twitter-bg-color;    
+            color: $twitter-bg-color;
         }
         .facebook{
-            background-color: #3b5998;
+            background-color: $facebook-bg-color;
         }
         .facebook:hover{
-            border: 1px solid #3b5998;    
-            color: #3b5998; 
+            border: 1px solid $facebook-bg-color;    
+            color: $facebook-bg-color; 
         }
         .instagram{
-            background-color: #3f729b;
+            background-color: $instagram-bg-color;
         }
         .instagram:hover{
-            border: 1px solid #3f729b;    
-            color: #3f729b; 
+            border: 1px solid $instagram-bg-color;    
+            color: $instagram-bg-color; 
         }
         .dribbble{
-            background-color: #ea4c89;
+            background-color: $dribbble-bg-color;
         }
         .dribbble:hover{
-            border: 1px solid #ea4c89;    
-            color: #ea4c89;
+            border: 1px solid $dribbble-bg-color;    
+            color: $dribbble-bg-color;
         }
         .github{
-            background-color: #333333;       
+            background-color: $github-bg-color;       
         }
         .github:hover{
-            border: 1px solid #333333;    
-            color: #333333;
+            border: 1px solid $github-bg-color;    
+            color: $github-bg-color;
         }
         &__item:hover{
             text-decoration: none;
-            background-color: #fff;
+            background-color: $main-bg-light-color;
         }
     }
 }
 
 :-moz-placeholder{
     font-size: 13px;
-    font-family: "RobotoRegular";
+    font-family: "main-text-font";
     color: rgb(131, 167, 165);
     line-height: 1.385;
 }
 :-ms-input-placeholder{
     font-size: 13px;
-    font-family: "RobotoRegular";
+    font-family: "main-text-font";
     color: rgb(131, 167, 165);
     line-height: 1.385;
 }
 ::-webkit-input-placeholder{
     font-size: 13px;
-    font-family: "RobotoRegular";
+    font-family: "main-text-font";
     color: rgb(131, 167, 165);
     line-height: 1.385;
 }
@@ -808,9 +842,6 @@ body{
 
 @media (max-width: 850px){
     .header{
-        &__content{
-            padding: 0 22px;
-        }
         .navigation{
             display: none;
         }
@@ -830,7 +861,6 @@ body{
                 background-color: transparent;
                 color: #6fb048;
                 &__item{
-                    
                     margin: 0;
                 }
                 &__link{
@@ -845,6 +875,16 @@ body{
         &__caption{
             padding: 200px 0 150px;
             width: 70%;
+        }
+        &_about-us{
+            &__header{
+                font-size: 36px;
+            }
+            &__caption{
+                padding: 255px 0 165px;
+                width: 100%;
+                margin: 0;    
+            }
         }
     }
     .about-us{
@@ -987,6 +1027,21 @@ body{
 }
 
 @media (max-width: 668px){
+    .masthead{
+        &__learn-more-button{
+            padding: 18px 30px;
+        }
+        &_about-us{
+            &__header{
+                font-size: 36px;
+            }
+            &__caption{
+                padding: 200px 0 110px;
+                width: 100%;
+                margin: 0;    
+            }
+        }
+    }
     .section__description{
         width: 95%;
     }
@@ -1085,6 +1140,9 @@ body{
             width: 40%;
             margin-bottom: 45px;
         }
+        &__column:last-child{
+            margin-bottom: 0;
+        }
     }
     
 }
@@ -1093,15 +1151,12 @@ body{
     .header{
         &__content{
             justify-content: center;
+            padding: 10px 0 !important;
         }
-        &__left{
+        &__left, &__right{
             justify-content: center;
-            padding: 32px 0 0;
-        }   
-        &__right{
-            justify-content: center;
-            padding: 16px 0 32px;
-        }
+            padding: 5px 0;
+        } 
     }
     .presentation{
         &__body{
@@ -1131,6 +1186,30 @@ body{
     .pricing{
         .plan{
             width: 100%;
+        }
+    }
+    .footer{
+        &__content{
+            justify-content: space-evenly;
+        }
+        &__column{
+            width: 33%;
+            margin-bottom: 25px;
+            .column{
+                &__header{
+                    margin-bottom: 12px;
+                }
+                &__data-row{
+                    margin-bottom: 7px;
+                }
+            }
+        }
+        &__column:first-child{
+            width: 77%;
+        }
+        &__column:last-child{
+            width: 77%;
+            text-align: center;
         }
     }
     .copyright{

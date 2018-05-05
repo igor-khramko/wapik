@@ -1,5 +1,5 @@
 @font-face {
-	font-family: 'ProximaNovaBold';
+	font-family: 'font-logo';
 	src: url('../fonts/ProximaNova/ProximaNova-Bold.#iefix') format('embedded-opentype'),
 	url('../fonts/ProximaNova/ProximaNovaBold.eot') format('eot'),
     url('../fonts/ProximaNova/ProximaNovaBold.woff') format('woff'),
@@ -7,28 +7,28 @@
 	url('../fonts/ProximaNova/ProximaNovaBold.svg') format('svg');
 }
 @font-face {
-	font-family: 'RobotoRegular';
+	font-family: 'main-text-font';
 	src: url('../fonts/Roboto/RobotoRegular.ttf');
 }
 @font-face {
-	font-family: 'RobotoLight';
+	font-family: 'header-font';
 	src: url('../fonts/Roboto/RobotoLight.ttf');
 }
 @font-face {
-	font-family: 'RobotoMedium';
+	font-family: 'author-name';
 	src: url('../fonts/Roboto/RobotoMedium.ttf');
 }
 @font-face {
-	font-family: 'Montserrat';
+	font-family: 'font-button-menu-numbers';
 	src: url('../fonts/Montserrat/MontserratRegular.ttf');
 }
 @font-face {
-	font-family: 'Merriweather';
+	font-family: 'font-testimonial-description';
 	src: url('../fonts/Merriweather/MerriweatherLight.ttf');
 }
 
 @font-face {
-	font-family: 'Icons';
+	font-family: 'font-icons';
 	src:url('../fonts/Icons/icons.#iefix') format('embedded-opentype'),
 		url('../fonts/Icons/icons.ttf') format('ttf'),
 		url('../fonts/Icons/icons.eot') format('eot'),

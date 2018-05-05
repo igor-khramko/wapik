@@ -1,16 +1,17 @@
 doctype html
 head
     meta(charset='utf-8')
-    title Wapik
+    title Wapik - Home
     meta(name='viewport', content='initial-scale=1')
     link(rel='stylesheet', type='text/css', href='styles/main.css')
+    link(rel="shortcut icon" href="/images/favicon.png" type="image/x-icon")
 body
     section.header.header_dark-bg
         .container
             .header__content
                 .header__left
                     .header__company-name Wapik
-                    a.link.header__phone-number
+                    a.link.header__phone-number(href="tel:+62 202 555 0117")
                         span.header__phone-icon &#xf4b9;
                         |+62 202 555 0117
                 .header__right
@@ -82,8 +83,9 @@ body
                     .section__underline
                     .section__description.section-description-presentation Donec id elit non mi porta gravida at eget metus.
                 .presentation__body
-                    .phone__screen
-                        img(src="images/screen.png", alt="Uphone screen image")
+                    img.phone__screen(src="images/screen.png", alt="Uphone screen image")
+                    img.phone__screen.hide-screen(src="images/screen2.jpg", alt="Uphone screen image")
+                    img.phone__screen.hide-screen(src="images/screen3.jpg", alt="Uphone screen image")
                     .presentation__caption
                         .presentation__header Responsive Ready
                         .presentation__description Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper.
@@ -178,8 +180,9 @@ body
                 .footer__column.column
                     .column__header Wapik
                     .column__data-row @: 
-                        span.column__email-address hi@wapik.com
-                    .column__data-row p: +62 202 555 0117
+                        a.column__email-address.link(href="mailto:hi@wapik.com") hi@wapik.com
+                    .column__data-row p: 
+                        a.column__phone-number.link(href="tel:+62 202 555 0117") +62 202 555 0117
                     .column__data-row.address a: 610 Overlook Circle Suite 323 Kalamazoo, MI 49009
                 .footer__column.column
                     .column__header Company
@@ -204,7 +207,7 @@ body
                 .footer__column.column
                     .column__header Newsletter
                     .column__description Subscribe to our newsletter and get all the cool news
-                    form.footer__email-field(action="")
+                    form.footer__email-field
                         input.footer__email.link(type="email", placeholder="Enter Email", id="email", required)
                         button.footer__email-submit-button &#xf473;
     section.copyright
@@ -217,5 +220,10 @@ body
                     a.link.socials__item.instagram(href="http://instagram.com", title="Our Instagram") &#xf351;
                     a.link.socials__item.dribbble(href="http://dribbble.com", title="Our Dribbble") &#xf22c;
                     a.link.socials__item.github(href="http://github.com", title="Our Github") &#xf4e8;
-    script(src="../scripts/headerNavigation.js")
-    script(src="../scripts/mouseClick.js")
+    script(src="scripts/main.js")
+    script(src="scripts/headerNavigation.js")
+    script(src="scripts/activeMenu.js")
+    script(src="scripts/changePhoneScreen.js")
+    script(src="scripts/mouseClick.js")
+    script(src="scripts/headerScroll.js")
+    //- script(src="scripts/headerMenuScroll.js")

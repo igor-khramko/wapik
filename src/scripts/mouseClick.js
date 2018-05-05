@@ -1,7 +1,13 @@
-var button = document.querySelectorAll(".button");
-function buttonClick(){
-    for(i=0; i<button.length; i++){
-        button[i].classList.toggle("button_clicked");
-    }
+let button = document.querySelectorAll(".button_hover-transparent");
+for(let i=0; i<button.length; i++){
+    button[i].addEventListener("mousedown", buttonDown);
+    button[i].addEventListener("mouseup", buttonUp);
 }
-button.addEventListener("click", buttonClick);
+function buttonDown(){
+    button[i].classList.add("button_clicked");
+}
+function buttonUp(){
+    button[i].classList.remove("button_clicked");
+}
+
+

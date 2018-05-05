@@ -8,3 +8,11 @@ burger.addEventListener("click", changeMenuState);
 for(var i=0; i<menuItems.length; i++){
     menuItems[i].addEventListener("click", changeMenuState);
 }
+window.addEventListener("resize", removeMenu);
+function removeMenu(){
+    if(menu.classList.contains("header__navigation_visible")){
+        menu.classList.remove("header__navigation_visible");
+    }
+}
+
+
