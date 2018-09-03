@@ -4,6 +4,7 @@
 @import 'icons';
 @import 'about-us';
 @import 'contact-us';
+@import 'animation';
 @mixin masthead-bg($masthead-bg-url){
     background: url($masthead-bg-url) no-repeat;
     box-shadow: inset 0 0 0 1000px $masthead-inset-shadow;
@@ -44,6 +45,7 @@ body{
     cursor: pointer;
     box-sizing: border-box;
     outline: none;
+    transition: all 1s;
     &_green{
         background-color: $lightgreen-color;
     }
@@ -258,6 +260,12 @@ body{
         &__feature{
             width: 31%;
         }
+        &__feature:hover{
+            -webkit-animation: swing 0.6s ease;
+            animation: swing 0.6s ease;
+            -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+        }
         &__icon{
             @include icons(56px);
             color: $lightgreen-color;
@@ -286,6 +294,13 @@ body{
         @include flex(space-between);
         &__feature{
             width: 47%;
+        }
+
+        &__feature:hover{
+            -webkit-animation: swing 0.6s ease;
+            animation: swing 0.6s ease;
+            -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
         }
 
         &__feature:nth-child(1){
@@ -452,6 +467,7 @@ body{
         flex-wrap: wrap;
     }
     .plan{
+        transition: all 1s;
         box-sizing: border-box;
         width: 26%;
         padding: 30px 0;
@@ -464,17 +480,20 @@ body{
             color: $lightgreen-color;
             text-transform: uppercase;
             margin-bottom: 30px;
+            transition: all 1s;
         }
         &__price{
             font-size: 65px;
             font-family: "font-button-menu-numbers";
             color: $dark-heading-color;
-            line-height: 1;             
+            line-height: 1;            
+            transition: all 1s; 
         }
         &__duration{
             font-size: 14px;
             font-family: "main-text-font";
             color: $dark-heading-color;
+            transition: all 1s;
         }
         &__options{
             font-size: 14px;
@@ -482,10 +501,12 @@ body{
             color: $description-font-color;
             line-height: 2;
             margin: 28px 0;
+            transition: all 1s;
         }
         &__select-button{
             background-color: $select-plan-hover-btn-bg;
             padding: 16px 25px;
+            transition: all 1s;
         }
         
     }
@@ -559,6 +580,7 @@ body{
         display: block;
         margin: 0 auto 20px;
         width: 25%;
+        transition: all 1s;
     }
     &__title:hover{
         color: $lightgreen-color;
@@ -681,6 +703,7 @@ body{
         cursor: pointer;
         font-weight: bold;
         outline: none;
+        transition: all 1s;
     }
     &__email-submit-button:hover{
         color: $dark-heading-color;
@@ -713,6 +736,7 @@ body{
             border: 1px solid transparent;    
             color: $socials-items-font;  
             margin-right: 10px;
+            transition: all 1.5s;
         }
         &__item:last-child{
             margin-right: 0;
@@ -789,9 +813,6 @@ body{
         &__item{
             width: 40%;
         }
-        &__item:last-child{
-            margin: 0 auto;
-        }
     }
     .testimonials{
         &__content{
@@ -821,6 +842,12 @@ body{
     .teammate:last-child{
         margin-bottom: 0;
     }
+    .our-team:hover{
+        .teammate, .teammate:first-child, .teammate:last-child{
+            animation: unset;
+        }
+    }
+    
     .feedback{
         .headquarter{
             width: 30%;
@@ -1075,15 +1102,17 @@ body{
             flex-direction: column;
             &__feature{
                 width: 98%;
-                max-width: 300px;
+                max-width: unset;
                 margin-bottom: 30px;
-                align-self: flex-start;
+                align-self: center;
             }
-            &__feature:nth-child(2n){
-                align-self: flex-end;
+            &__heading{
+                margin-bottom: 0;
+                display: block;
+                text-align: center;
             }
-            &__feature:nth-child(1){
-                margin-bottom: 30px;
+            &__header{
+                margin: 10px 0;
             }
             &__description{
                 text-align: center;
@@ -1129,10 +1158,7 @@ body{
         &__item{
             width: 100%;
             max-width: 300px;
-            align-self: flex-start;
-        }
-        &__item:nth-child(2n){
-            align-self: flex-end;
+            align-self: center;
         }
     }
     .footer{

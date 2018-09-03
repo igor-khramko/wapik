@@ -3,7 +3,7 @@ var screen = document.querySelector(".phone");
 screen.addEventListener("click", changePhoneScreen);
 screen.addEventListener("mouseover", altText);
 
-function changePhoneScreen(){
+function changePhoneScreen(){   
     for(let i = 0; i < screenItems.length; i++){
         if(!screenItems[i].classList.contains("hide-screen")){ 
             screenItems[i].classList.add("hide-screen"); 

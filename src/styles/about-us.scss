@@ -42,8 +42,28 @@
         .teammate:last-child{
             margin-right: 0;
         }
-        .teammate:hover{
-            box-shadow: 0 0 10px 5px rgb(136, 136, 136);
-        }
     }
 }
+
+.our-team:hover{
+    .teammate{
+        -webkit-animation: slideInUp 1.5s ease;
+        animation: slideInUp 1.5s ease;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+    }
+    .teammate:first-child{
+        -webkit-animation: fadeInLeft 1.5s ease;
+        animation: fadeInLeft 1.5s ease;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+    }
+    .teammate:last-child{
+        -webkit-animation: fadeInRight 1.5s ease;
+        animation: fadeInRight 1.5s ease;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+    }
+}
+
+
